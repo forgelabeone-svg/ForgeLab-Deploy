@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teszt statikus oldal</title>
+    <meta name="description" content="Egyszerű teszt statikus weboldal (HTML/CSS/JS)." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ugrás a tartalomra</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">TS</div>
+          <div class="brand-text">
+            <div class="brand-title">Teszt Site</div>
+            <div class="brand-subtitle">HTML • CSS • JS</div>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Fő navigáció">
+          <a href="#features">Funkciók</a>
+          <a href="#stats">Statisztika</a>
+          <a href="#contact">Kapcsolat</a>
+          <button id="themeToggle" class="btn btn-ghost" type="button" aria-pressed="false">
+            Téma váltás
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1>Gyors teszt statikus weboldal</h1>
+            <p class="lead">
+              Készen áll egy minimál, de igényes demo oldal, kis interaktivitással (témaváltó, kártyák,
+              űrlap validáció).
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#features">Nézd meg</a>
+              <button id="randomizeBtn" class="btn btn-secondary" type="button">
+                Véletlen statisztika
+              </button>
+            </div>
+
+            <p class="micro">
+              Tipp: a témát a jobb felső gombbal tudod váltani. A beállítás elmentődik.
+            </p>
+          </div>
+
+          <div class="hero-panel" role="region" aria-label="Állapot panel">
+            <div class="panel-row">
+              <span class="k">Állapot</span>
+              <span id="statusBadge" class="badge badge-ok">OK</span>
+            </div>
+            <div class="panel-row">
+              <span class="k">Utolsó művelet</span>
+              <span id="lastAction" class="v">—</span>
+            </div>
+            <div class="panel-row">
+              <span class="k">Idő</span>
+              <span id="clock" class="v">—</span>
+            </div>
+            <hr class="panel-sep" />
+            <p class="panel-hint">
+              Ez csak egy statikus demo. Nincs backend, minden a böngészőben fut.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Funkciók</h2>
+            <p>Három egyszerű blokk, hogy legyen mit nézni és kattintani.</p>
+          </div>
+
+          <div class="grid">
+            <article class="card">
+              <h3>Témaváltás</h3>
+              <p>Világos/sötét mód, mentés <code>localStorage</code>-ba.</p>
+              <button class="btn btn-ghost card-action" type="button" data-action="theme">
+                Váltás most
+              </button>
+            </article>
+
+            <article class="card">
+              <h3>Statisztika</h3>
+              <p>Kattintásra frissülő számok, animált megjelenítéssel.</p>
+              <a class="btn btn-ghost card-action" href="#stats" data-action="stats">Ugrás</a>
+            </article>
+
+            <article class="card">
+              <h3>Űrlap</h3>
+              <p>Egyszerű kliens oldali validáció és “küldés” szimuláció.</p>
+              <a class="btn btn-ghost card-action" href="#contact" data-action="contact">Megnyit</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="stats" class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Statisztika</h2>
+            <p>Demo számlálók: frissíthetők a gombbal.</p>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-value" data-counter id="statVisitors">0</div>
+              <div class="stat-label">Látogató (demo)</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value" data-counter id="statDownloads">0</div>
+              <div class="stat-label">Letöltés (demo)</div>
+            </div>
+            <div class="stat">
+              <div class="stat-value" data-counter id="statStars">0</div>
+              <div class="stat-label">Csillag (demo)</div>
+            </div>
+          </div>
+
+          <div class="section-actions">
+            <button id="refreshStatsBtn" class="btn btn-primary" type="button">Frissítés</button>
+            <button id="resetStatsBtn" class="btn btn-secondary" type="button">Nullázás</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Kapcsolat</h2>
+            <p>Nem küld sehova, csak validál és visszajelez.</p>
+          </div>
+
+          <form id="contactForm" class="form" novalidate>
+            <label class="field">
+              <span class="label">Név</span>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Pl. Tibor" required />
+              <span class="error" data-error-for="name"></span>
+            </label>
+
+            <label class="field">
+              <span class="label">Email</span>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="tibor@pelda.hu" required />
+              <span class="error" data-error-for="email"></span>
+            </label>
+
+            <label class="field">
+              <span class="label">Üzenet</span>
+              <textarea id="message" name="message" rows="5" placeholder="Írj valamit..." required></textarea>
+              <span class="error" data-error-for="message"></span>
+            </label>
+
+            <div class="form-actions">
+              <button id="submitBtn" class="btn btn-primary" type="submit">Küldés</button>
+              <button class="btn btn-ghost" type="reset">Törlés</button>
+            </div>
+
+            <div id="formToast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© <span id="year"></span> Teszt statikus oldal</span>
+        <span class="dot">•</span>
+        <a href="#main">Vissza az elejére</a>
+      </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
