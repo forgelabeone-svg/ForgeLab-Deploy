@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+<head>
+    <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Forge Lab - Cyberpunk fejlesztői környezet Tibor számára">
+  <meta name="theme-color" content="#020617">
+  <title>Forge Lab | Cyberpunk Dev Environment</title>
+  
+  <!-- Import Tailwind CSS through Vite -->
+  <script type="module" crossorigin src="/assets/index-DTMORfeF.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-8ChuOJyJ.css">
+</head>
+<body class="bg-void-dark text-slate-50 antialiased overflow-x-hidden">
+
+  <!-- Custom Cursor Elements -->
+  <div id="cursor" class="fixed w-4 h-4 border-2 border-neon-blue rounded-full pointer-events-none z-[9999] mix-blend-difference hidden md:block transition-transform duration-100"></div>
+  <div id="cursor-follower" class="fixed w-8 h-8 border border-neon-blue/50 rounded-full pointer-events-none z-[9998] mix-blend-difference hidden md:block transition-transform duration-200"></div>
+
+  <!-- Scanline Effect -->
+  <div class="scanline"></div>
+
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 bg-void-dark/80 backdrop-blur-md border-b border-neon-blue/20">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center gap-2 group cursor-pointer">
+          <div class="w-8 h-8 border-2 border-neon-blue rounded flex items-center justify-center text-neon-blue font-bold animate-pulse group-hover:bg-neon-blue group-hover:text-void-dark transition-all">FL</div>
+          <span class="text-2xl font-bold tracking-[0.2em] font-display">
+            FORGE<span class="text-neon-pink">LAB</span>
+          </span>
+        </div>
+        
+        <div class="hidden md:flex items-center gap-8 text-sm font-mono">
+          <a href="#kezdolap" class="text-gray-400 hover:text-neon-blue transition-colors uppercase tracking-wider">/Kezdőlap</a>
+          <a href="#szolgaltatasok" class="text-gray-400 hover:text-neon-pink transition-colors uppercase tracking-wider">/Szolgáltatások</a>
+          <a href="#terminal" class="text-gray-400 hover:text-neon-purple transition-colors uppercase tracking-wider">/Terminal</a>
+          <a href="#kapcsolat" class="px-4 py-2 border border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-void-dark transition-all uppercase tracking-wider">/Kapcsolat</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden text-neon-blue hover:text-neon-pink transition-colors">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-void-dark border-b border-neon-blue/20">
+      <div class="container mx-auto px-6 py-4 flex flex-col gap-4 font-mono">
+        <a href="#kezdolap" class="text-gray-400 hover:text-neon-blue transition-colors py-2">/Kezdőlap</a>
+        <a href="#szolgaltatasok" class="text-gray-400 hover:text-neon-pink transition-colors py-2">/Szolgáltatások</a>
+        <a href="#terminal" class="text-gray-400 hover:text-neon-purple transition-colors py-2">/Terminal</a>
+        <a href="#kapcsolat" class="text-neon-blue border border-neon-blue px-4 py-2 text-center hover:bg-neon-blue hover:text-void-dark transition-all">/Kapcsolat</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="kezdolap" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <div class="absolute inset-0 grid-bg opacity-20"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-void-dark/50 to-void-dark"></div>
+    
+    <div class="container mx-auto px-6 relative z-10 text-center">
+      <div class="mb-4 text-neon-blue font-mono text-sm tracking-[0.3em] uppercase animate-pulse">
+        <span class="inline-block w-2 h-2 bg-neon-blue mr-2 animate-ping"></span>
+        System Online // v2.0.77
+      </div>
+      
+      <h1 class="text-6xl md:text-8xl font-bold mb-6 font-display tracking-tighter">
+        <span class="glitch-text" data-text="FORGE">FORGE</span>
+        <span class="text-neon-pink glitch-text" data-text="_LAB">_LAB</span>
+      </h1>
+      
+      <p class="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto mb-8 font-mono h-8" id="typewriter"></p>
+      
+      <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+        <a href="#szolgaltatasok" class="px-8 py-4 bg-neon-blue text-void-dark font-bold uppercase tracking-wider hover:bg-white transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(0,243,255,0.5)]">
+          Rendszer Belépés
+        </a>
+        <a href="#terminal" class="px-8 py-4 border border-neon-pink text-neon-pink font-bold uppercase tracking-wider hover:bg-neon-pink hover:text-void-dark transition-all">
+          Konzol Megnyitása
+        </a>
+      </div>
+
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto text-center font-mono text-xs text-gray-500">
+        <div class="p-4 border border-gray-800 rounded bg-black/20">
+          <div class="text-neon-blue text-lg font-bold counter" data-target="99.9">0</div>
+          <div>Uptime %</div>
+        </div>
+        <div class="p-4 border border-gray-800 rounded bg-black/20">
+          <div class="text-neon-pink text-lg font-bold counter" data-target="24">0</div>
+          <div>Óra Support</div>
+        </div>
+        <div class="p-4 border border-gray-800 rounded bg-black/20">
+          <div class="text-neon-purple text-lg font-bold counter" data-target="777">0</div>
+          <div>Projekt</div>
+        </div>
+        <div class="p-4 border border-gray-800 rounded bg-black/20">
+          <div class="text-green-400 text-lg font-bold counter" data-target="0">0</div>
+          <div>Downtime</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features/Services Section -->
+  <section id="szolgaltatasok" class="py-20 relative">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 font-display">
+          <span class="text-neon-blue">&gt;</span> Szolgáltatások<span class="text-neon-pink">_</span>
+        </h2>
+        <div class="w-32 h-1 bg-gradient-to-r from-neon-blue to-neon-pink mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="cyber-card p-8 border border-gray-800 bg-black/30 hover:border-neon-blue transition-all group">
+          <div class="text-4xl mb-4 text-neon-blue group-hover:scale-110 transition-transform">⚡</div>
+          <h3 class="text-xl font-bold mb-2 text-white">Frontend Fejlesztés</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            React, Vue, Angular alkalmazások építése Vite-alapú build rendszerekkel. Tailwind CSS optimalizáció.
+          </p>
+          <div class="mt-4 text-neon-blue text-xs font-mono">&gt; npm run dev</div>
+        </div>
+
+        <div class="cyber-card p-8 border border-gray-800 bg-black/30 hover:border-neon-pink transition-all group">
+          <div class="text-4xl mb-4 text-neon-pink group-hover:scale-110 transition-transform">🎨</div>
+          <h3 class="text-xl font-bold mb-2 text-white">UI/UX Design</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Cyberpunk stílusú interfészek tervezése. Figma prototípusok és interaktív mockupok készítése.
+          </p>
+          <div class="mt-4 text-neon-pink text-xs font-mono">&gt; design.system.init()</div>
+        </div>
+
+        <div class="cyber-card p-8 border border-gray-800 bg-black/30 hover:border-neon-purple transition-all group">
+          <div class="text-4xl mb-4 text-neon-purple group-hover:scale-110 transition-transform">🚀</div>
+          <h3 class="text-xl font-bold mb-2 text-white">Deploy & CI/CD</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Statikus hosting optimalizálása. GitHub Actions, automatizált build folyamatok beállítása.
+          </p>
+          <div class="mt-4 text-neon-purple text-xs font-mono">&gt; git push origin main</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Terminal Section -->
+  <section id="terminal" class="py-20 bg-black/50 border-y border-gray-800">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="bg-gray-900/80 rounded-lg overflow-hidden border border-gray-700 shadow-2xl">
+        <div class="bg-gray-800 px-4 py-2 flex items-center gap-2 border-b border-gray-700">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          <div class="ml-4 text-xs text-gray-400 font-mono">tibor@forge-lab: ~/projects/cyberpunk-site</div>
+        </div>
+        <div class="p-6 font-mono text-sm h-64 overflow-y-auto" id="terminal-output">
+          <div class="text-green-400 mb-2">$ npm install vite tailwindcss --save-dev</div>
+          <div class="text-gray-400 mb-2">[INFO] Forge Lab environment initialized</div>
+          <div class="text-gray-400 mb-2">[WARN] Backend dependencies not found (OK - static mode)</div>
+          <div class="text-neon-blue mb-2">[OK] Server started at http://localhost:5173</div>
+          <div class="text-gray-400 mb-2">[INFO] Watching for changes...</div>
+          <div class="text-neon-pink mb-2">[SYSTEM] Welcome, Tibor. Ready for input.</div>
+          <div class="flex items-center gap-2 mt-4">
+            <span class="text-green-400">❯</span>
+            <span class="animate-pulse">_</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-6 flex justify-between items-center text-xs font-mono text-gray-500">
+        <div>Status: <span class="text-green-400">● Online</span></div>
+        <div>Latency: <span class="text-neon-blue">12ms</span></div>
+        <div>Session: <span id="login-time" class="text-neon-pink">--</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="kapcsolat" class="py-20 relative">
+    <div class="container mx-auto px-6 max-w-2xl">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4 font-display">
+          <span class="text-neon-pink">&gt;</span> Kapcsolat<span class="text-neon-blue">_</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-neon-pink to-neon-blue mx-auto"></div>
+      </div>
+      
+      <form class="space-y-6" id="contact-form">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="relative group">
+            <input type="text" id="name" required 
+              class="w-full bg-transparent border-b-2 border-gray-700 py-3 text-white focus:outline-none focus:border-neon-blue transition-colors peer placeholder-transparent"
+              placeholder="Név">
+            <label for="name" 
+              class="absolute left-0 top-3 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-neon-blue peer-valid:-top-2 peer-valid:text-xs cursor-text">
+              Azonosító (Név)
+            </label>
+            <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-blue transition-all duration-300 group-focus-within:w-full"></div>
+          </div>
+          
+          <div class="relative group">
+            <input type="email" id="email" required 
+              class="w-full bg-transparent border-b-2 border-gray-700 py-3 text-white focus:outline-none focus:border-neon-pink transition-colors peer placeholder-transparent"
+              placeholder="Email">
+            <label for="email" 
+              class="absolute left-0 top-3 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-neon-pink peer-valid:-top-2 peer-valid:text-xs cursor-text">
+              Kommunikációs csatorna (Email)
+            </label>
+            <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-pink transition-all duration-300 group-focus-within:w-full"></div>
+          </div>
+        </div>
+        
+        <div class="relative group">
+          <textarea id="message" rows="4" required 
+            class="w-full bg-transparent border-b-2 border-gray-700 py-3 text-white focus:outline-none focus:border-neon-purple transition-colors peer placeholder-transparent resize-none"
+            placeholder="Üzenet"></textarea>
+          <label for="message" 
+            class="absolute left-0 top-3 text-gray-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-neon-purple peer-valid:-top-2 peer-valid:text-xs cursor-text">
+            Adatcsomag (Üzenet)
+          </label>
+          <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-neon-purple transition-all duration-300 group-focus-within:w-full"></div>
+        </div>
+        
+        <button type="submit" 
+          class="w-full py-4 border border-neon-blue text-neon-blue font-bold uppercase tracking-[0.2em] hover:bg-neon-blue hover:text-void-dark transition-all duration-300 relative overflow-hidden group">
+          <span class="absolute inset-0 w-full h-full bg-neon-blue transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
+          <span class="relative z-10 flex items-center justify-center gap-2">
+            <span>Üzenet küldése</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+            </svg>
+          </span>
+        </button>
+      </form>
+      
+      <div id="form-success" class="hidden mt-6 p-4 border border-green-500 bg-green-500/10 text-green-400 text-center">
+        ✓ Adatcsomag sikeresen továbbítva a Forge Lab központba.
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-800 bg-black/40 py-12">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 border border-neon-blue rounded flex items-center justify-center text-xs text-neon-blue font-bold">FL</div>
+          <span class="text-lg font-bold tracking-wider">FORGE<span class="text-neon-pink">LAB</span></span>
+        </div>
+        
+        <div class="flex gap-6 text-sm text-gray-500">
+          <a href="#" class="hover:text-neon-blue transition-colors">Protokoll</a>
+          <a href="#" class="hover:text-neon-blue transition-colors">Adatvédelem</a>
+          <a href="#" class="hover:text-neon-blue transition-colors">Licenc</a>
+        </div>
+        
+        <div class="text-sm text-gray-600 font-mono">
+          <span class="text-neon-blue">v</span>2.0.77 | <span id="year"></span>
+        </div>
+      </div>
+      
+      <div class="mt-8 pt-8 border-t border-gray-800 text-center text-xs text-gray-700">
+        <p>© <span id="year-footer"></span> Forge Lab Industries. Minden jog fenntartva a jövőben.</p>
+        <p class="mt-2 font-mono">Készült Vite + Tailwind technológiával | Tibor számára</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
