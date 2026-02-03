@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <base href="/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Űrutazás — Kozmikus kalandok</title>
+    <meta
+      name="description"
+      content="Fedezd fel az űrutazás világát: küldetések, technológia, útvonalak és a következő évtized nagy ugrásai."
+    />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <script type="module" crossorigin src="/assets/index-DDUsXJpN.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Xv5HCTOk.css">
+  </head>
+
+  <body class="min-h-screen bg-slate-950 text-white selection:bg-fuchsia-500/30 selection:text-white">
+    <div class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(124,58,237,0.25),transparent_55%)]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(236,72,153,0.18),transparent_55%)]"></div>
+      <div class="absolute inset-0 opacity-60 [background:linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:48px_48px]"></div>
+    </div>
+
+    <header class="sticky top-0 z-20 border-b border-white/10 bg-slate-950/60 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+        <a href="#top" class="group inline-flex items-center gap-2">
+          <span
+            class="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-violet-500/80 to-fuchsia-500/80 shadow-[0_0_0_1px_rgba(255,255,255,0.12)]"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 24 24" class="h-5 w-5 text-white" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2l2.2 6.2L20 10l-5.8 1.8L12 18l-2.2-6.2L4 10l5.8-1.8L12 2Z"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M7.5 20.5c2.2-1.4 6.8-1.4 9 0"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+          <span class="text-sm font-semibold tracking-wide text-white/90 group-hover:text-white">Kozmikus Út</span>
+        </a>
+
+        <nav class="hidden items-center gap-6 text-sm text-white/70 md:flex">
+          <a class="hover:text-white" href="#kuldetesek">Küldetések</a>
+          <a class="hover:text-white" href="#technologia">Technológia</a>
+          <a class="hover:text-white" href="#utvonalak">Útvonalak</a>
+          <a class="hover:text-white" href="#gyik">GYIK</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a
+            href="#cta"
+            class="inline-flex items-center justify-center rounded-xl bg-white/10 px-4 py-2 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(255,255,255,0.12)] hover:bg-white/15"
+          >
+            Indulás
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="mx-auto max-w-6xl px-4 pb-14 pt-14 md:pb-20 md:pt-20">
+        <div class="grid items-center gap-10 md:grid-cols-2">
+          <div>
+            <p class="mb-4 inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-xs text-white/70">
+              <span class="h-2 w-2 rounded-full bg-fuchsia-400"></span>
+              Új: Hold‑kerülő útvonalak &amp; alacsony pályás kirándulások
+            </p>
+
+            <h1 class="text-balance text-4xl font-black tracking-tight md:text-5xl">
+              Űrutazás, ahogy mindig is elképzelted
+            </h1>
+
+            <p class="mt-5 max-w-prose text-pretty text-base leading-relaxed text-white/70">
+              A következő évtizedben az űr nem csak a kutatás terepe: egyre közelebb kerül a civil utazókhoz is.
+              Itt megtalálod a legfontosabb fogalmakat, technológiákat és útvonalakat — érthetően, egy helyen.
+            </p>
+
+            <div class="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href="#kuldetesek"
+                class="inline-flex items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(236,72,153,0.18)] hover:brightness-110"
+              >
+                Küldetések megismerése
+              </a>
+              <a
+                href="#technologia"
+                class="inline-flex items-center justify-center rounded-xl bg-white/10 px-5 py-3 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(255,255,255,0.12)] hover:bg-white/15"
+              >
+                Hogyan működik?
+              </a>
+            </div>
+
+            <dl class="mt-10 grid grid-cols-3 gap-4 rounded-2xl bg-white/5 p-5 shadow-[0_0_0_1px_rgba(255,255,255,0.10)]">
+              <div>
+                <dt class="text-xs text-white/60">Pálya</dt>
+                <dd class="mt-1 text-sm font-semibold">LEO → Lunar</dd>
+              </div>
+              <div>
+                <dt class="text-xs text-white/60">Időtartam</dt>
+                <dd class="mt-1 text-sm font-semibold">3–10 nap</dd>
+              </div>
+              <div>
+                <dt class="text-xs text-white/60">Élmény</dt>
+                <dd class="mt-1 text-sm font-semibold">Mikrogravitáció</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="relative">
+            <div class="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-violet-500/20 via-fuchsia-500/10 to-cyan-400/10 blur-2xl"></div>
+            <div class="rounded-[2rem] bg-white/5 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.10)]">
+              <div class="flex items-center justify-between">
+                <p class="text-xs font-semibold text-white/70">Küldetés tábla</p>
+                <p class="text-xs text-white/50">Szimuláció</p>
+              </div>
+
+              <div class="mt-5 grid gap-4">
+                <div class="rounded-2xl bg-slate-950/40 p-4 shadow-[0_0_0_1px_rgba(255,255,255,0.08)]">
+                  <div class="flex items-center justify-between">
+                    <p class="text-sm font-semibold">Orbitális keringés</p>
+                    <span class="rounded-full bg-emerald-500/15 px-2 py-1 text-xs font-semibold text-emerald-200">
+                      kész
+                    </span>
+                  </div>
+                  <p class="mt-2 text-sm text-white/60">Föld körüli pálya, panoráma és napkelte 90 percenként.</p>
+                </div>
+
+                <div class="rounded-2xl bg-slate-950/40 p-4 shadow-[0_0_0_1px_rgba(255,255,255,0.08)]">
+                  <div class="flex items-center justify-between">
+                    <p class="text-sm font-semibold">Hold‑kerülés</p>
+                    <span class="rounded-full bg-violet-500/15 px-2 py-1 text-xs font-semibold text-violet-200">
+                      folyamatban
+                    </span>
+                  </div>
+                  <p class="mt-2 text-sm text-white/60">
+                    Transzlunáris injekció, mélyűri kommunikáció, „Earthrise” látvány.
+                  </p>
+                </div>
+
+                <div class="rounded-2xl bg-slate-950/40 p-4 shadow-[0_0_0_1px_rgba(255,255,255,0.08)]">
+                  <div class="flex items-center justify-between">
+                    <p class="text-sm font-semibold">Visszatérés</p>
+                    <span class="rounded-full bg-fuchsia-500/15 px-2 py-1 text-xs font-semibold text-fuchsia-200">
+                      tervezés
+                    </span>
+                  </div>
+                  <p class="mt-2 text-sm text-white/60">Hőpajzs, légköri fékezés, vízreszállás vagy leszállópálya.</p>
+                </div>
+              </div>
+
+              <div class="mt-6 flex items-center justify-between rounded-2xl bg-white/5 px-4 py-3">
+                <p class="text-sm text-white/70">Átlagos terhelés</p>
+                <p class="text-sm font-semibold">3–4 g</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="kuldetesek" class="mx-auto max-w-6xl px-4 py-14 md:py-20">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <h2 class="text-2xl font-extrabold tracking-tight md:text-3xl">Küldetéstípusok</h2>
+            <p class="mt-2 max-w-prose text-sm leading-relaxed text-white/70">
+              Három népszerű „belső Naprendszer” célpont, ahol ma a legtöbb fejlesztés zajlik.
+            </p>
+          </div>
+          <p class="text-xs text-white/50">Tipp: kattints a szekciókra a gyors áttekintéshez.</p>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <a
+            href="#utvonalak"
+            class="group rounded-2xl border border-white/10 bg-white/5 p-8 shadow-[0_0_0_1px_rgba(255,255,255,0.06)] hover:border-fuchsia-400/40"
+          >
+            <div
+              class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-fuchsia-500/15 transition-transform group-hover:scale-110"
+            >
+              <svg
+                class="h-6 w-6 text-fuchsia-200"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M14 4c3.314 0 6 2.686 6 6c0 4-4 9-8 10c-4-1-8-6-8-10c0-3.314 2.686-6 6-6h4Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 10h4"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M12 8v4"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <h3 class="text-base font-bold">Alacsony Föld körüli pálya (LEO)</h3>
+            <p class="mt-2 text-sm text-white/70">
+              Rövid utak, űrállomás‑látogatás, mikrogravitációs kísérletek és földmegfigyelés.
+            </p>
+          </a>
+
+          <a
+            href="#technologia"
+            class="group rounded-2xl border border-white/10 bg-white/5 p-8 shadow-[0_0_0_1px_rgba(255,255,255,0.06)] hover:border-violet-400/40"
+          >
+            <div
+              class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-violet-500/15 transition-transform group-hover:scale-110"
+            >
+              <svg
+                class="h-6 w-6 text-violet-200"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 2l2.2 6.2L20 10l-5.8 1.8L12 18l-2.2-6.2L4 10l5.8-1.8L12 2Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 18v4"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M9.5 22h5"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <h3 class="text-base font-bold">Hold‑kerülés és pályára állás</h3>
+            <p class="mt-2 text-sm text-white/70">
+              Mélyűri navigáció, kommunikációs késleltetés és a Hold árnyékos pólusvidékei.
+            </p>
+          </a>
+
+          <a
+            href="#cta"
+            class="group rounded-2xl border border-white/10 bg-white/5 p-8 shadow-[0_0_0_1px_rgba(255,255,255,0.06)] hover:border-cyan-400/40"
+          >
+            <div
+              class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/15 transition-transform group-hover:scale-110"
+            >
+              <svg
+                class="h-6 w-6 text-cyan-200"
+                fill="none"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M21 12c-3 6-9 10-9 10S6 18 3 12c3-6 9-10 9-10s6 4 9 10Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 15a3 3 0 1 0 0-6a3 3 0 0 0 0 6Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                />
+              </svg>
+            </div>
+            <h3 class="text-base font-bold">Mélyűr és bolygóközi jövőkép</h3>
+            <p class="mt-2 text-sm text-white/70">
+              Energia‑ és életfenntartó rendszerek, sugárvédelem, hosszú távú pszichológia.
+            </p>
+          </a>
+        </div>
+      </section>
+
+      <section id="technologia" class="mx-auto max-w-6xl px-4 py-14 md:py-20">
+        <div class="grid gap-10 md:grid-cols-2 md:items-start">
+          <div>
+            <h2 class="text-2xl font-extrabold tracking-tight md:text-3xl">A technológia röviden</h2>
+            <p class="mt-3 text-sm leading-relaxed text-white/70">
+              Az űrutazás fő kihívásai: elég tolóerő a pályára álláshoz, megbízható életfenntartás és biztonságos
+              visszatérés.
+            </p>
+
+            <ul class="mt-8 space-y-4">
+              <li class="rounded-2xl bg-white/5 p-5 shadow-[0_0_0_1px_rgba(255,255,255,0.10)]">
+                <p class="text-sm font-semibold">Hajtóművek</p>
+                <p class="mt-1 text-sm text-white/70">
+                  Kémiai rakéták (ma), elektromos hajtás (hatékony), és kísérleti nukleáris megoldások (jövő).
+                </p>
+              </li>
+              <li class="rounded-2xl bg-white/5 p-5 shadow-[0_0_0_1px_rgba(255,255,255,0.10)]">
+                <p class="text-sm font-semibold">Életfenntartás</p>
+                <p class="mt-1 text-sm text-white/70">
+                  Zárt rendszerek: oxigén, víz újrahasznosítás, CO₂ szűrés, és vészhelyzeti redundancia.
+                </p>
+              </li>
+              <li class="rounded-2xl bg-white/5 p-5 shadow-[0_0_0_1px_rgba(255,255,255,0.10)]">
+                <p class="text-sm font-semibold">Sugárvédelem</p>
+                <p class="mt-1 text-sm text-white/70">
+                  Anyagválasztás, víz/üzemanyag pajzs, és okos útvonal‑/időzítés a napkitörések elkerülésére.
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="rounded-[2rem] bg-white/5 p-7 shadow-[0_0_0_1px_rgba(255,255,255,0.10)]">
+            <h3 class="text-base font-bold">Mini szószedet</h3>
+            <div class="mt-6 grid gap-4">
+              <div class="rounded-2xl bg-slate-950/40 p-4 shadow-[0_0_0_1px_rgba(255,255,255,0.08)]">
+                <p class="text-sm font-semibold">Δv (delta‑v)</p>
+                <p class="mt-1 text-sm text-white/70">„Sebesség‑költség”: mennyi manőver szükséges egy útvonalhoz.</p>
+              </div>
+              <div class="rounded-2xl bg-slate-950/40 p-4 shadow-[0_0_0_1px_rgba(255,255,255,0.08)]">
+                <p class="text-sm font-semibold">Hőpajzs</p>
+                <p class="mt-1 text-sm text-white/70">Visszatéréskor a légkörben keletkező hő ellen véd.</p>
+              </div>
+              <div class="rounded-2xl bg-slate-950/40 p-4 shadow-[0_0_0_1px_rgba(255,255,255,0.08)]">
+                <p class="text-sm font-semibold">Apoapszis / Periapszis</p>
+                <p class="mt-1 text-sm text-white/70">A pálya legtávolabbi és legközelebbi pontja a központi testhez.</p>
+              </div>
+              <div class="rounded-2xl bg-slate-950/40 p-4 shadow-[0_0_0_1px_rgba(255,255,255,0.08)]">
+                <p class="text-sm font-semibold">Mikrogravitáció</p>
+                <p class="mt-1 text-sm text-white/70">„Súlytalanság‑érzet”: valójában folyamatos szabadesés.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="utvonalak" class="mx-auto max-w-6xl px-4 py-14 md:py-20">
+        <h2 class="text-2xl font-extrabold tracking-tight md:text-3xl">Tipikus útvonalak</h2>
+        <p class="mt-3 max-w-prose text-sm leading-relaxed text-white/70">
+          Az alábbi három útvonal jól mutatja, hogyan nő a komplexitás (és az energiaigény) a cél távolságával.
+        </p>
+
+        <div class="mt-10 grid gap-6">
+          <div class="rounded-2xl bg-white/5 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.10)] md:p-8">
+            <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+              <div>
+                <h3 class="text-base font-bold">1) LEO kirándulás</h3>
+                <p class="mt-2 text-sm text-white/70">Indulás → pályára állás → 1–3 nap keringés → visszatérés.</p>
+              </div>
+              <div class="rounded-xl bg-emerald-500/10 px-3 py-2 text-xs font-semibold text-emerald-200">
+                Kezdő szint
+              </div>
+            </div>
+            <div class="mt-5 grid gap-3 md:grid-cols-3">
+              <div class="rounded-xl bg-slate-950/40 p-4">
+                <p class="text-xs text-white/60">Fő cél</p>
+                <p class="mt-1 text-sm font-semibold">Mikrogravitáció</p>
+              </div>
+              <div class="rounded-xl bg-slate-950/40 p-4">
+                <p class="text-xs text-white/60">Kommunikáció</p>
+                <p class="mt-1 text-sm font-semibold">Valós idejű</p>
+              </div>
+              <div class="rounded-xl bg-slate-950/40 p-4">
+                <p class="text-xs text-white/60">Kockázat</p>
+                <p class="mt-1 text-sm font-semibold">Alacsonyabb</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl bg-white/5 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.10)] md:p-8">
+            <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+              <div>
+                <h3 class="text-base font-bold">2) Hold‑kerülés (free return)</h3>
+                <p class="mt-2 text-sm text-white/70">
+                  Indulás → transzlunáris pálya → Hold melletti elrepülés → természetes visszatérés.
+                </p>
+              </div>
+              <div class="rounded-xl bg-violet-500/10 px-3 py-2 text-xs font-semibold text-violet-200">
+                Haladó
+              </div>
+            </div>
+            <div class="mt-5 grid gap-3 md:grid-cols-3">
+              <div class="rounded-xl bg-slate-950/40 p-4">
+                <p class="text-xs text-white/60">Fő cél</p>
+                <p class="mt-1 text-sm font-semibold">Mélyűri élmény</p>
+              </div>
+              <div class="rounded-xl bg-slate-950/40 p-4">
+                <p class="text-xs text-white/60">Kommunikáció</p>
+                <p class="mt-1 text-sm font-semibold">Késleltetés</p>
+              </div>
+              <div class="rounded-xl bg-slate-950/40 p-4">
+                <p class="text-xs text-white/60">Kockázat</p>
+                <p class="mt-1 text-sm font-semibold">Közepes</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl bg-white/5 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.10)] md:p-8">
+            <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+              <div>
+                <h3 class="text-base font-bold">3) Holdpálya / leszállási előkészítés</h3>
+                <p class="mt-2 text-sm text-white/70">
+                  Pályára állás a Hold körül, navigációs tartalékok, és felszíni műveletek előkészítése.
+                </p>
+              </div>
+              <div class="rounded-xl bg-fuchsia-500/10 px-3 py-2 text-xs font-semibold text-fuchsia-200">
+                Profi
+              </div>
+            </div>
+            <div class="mt-5 grid gap-3 md:grid-cols-3">
+              <div class="rounded-xl bg-slate-950/40 p-4">
+                <p class="text-xs text-white/60">Fő cél</p>
+                <p class="mt-1 text-sm font-semibold">Hold‑infrastruktúra</p>
+              </div>
+              <div class="rounded-xl bg-slate-950/40 p-4">
+                <p class="text-xs text-white/60">Kommunikáció</p>
+                <p class="mt-1 text-sm font-semibold">Föld‑Hold háló</p>
+              </div>
+              <div class="rounded-xl bg-slate-950/40 p-4">
+                <p class="text-xs text-white/60">Kockázat</p>
+                <p class="mt-1 text-sm font-semibold">Magasabb</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gyik" class="mx-auto max-w-6xl px-4 py-14 md:py-20">
+        <h2 class="text-2xl font-extrabold tracking-tight md:text-3xl">GYIK</h2>
+        <div class="mt-8 grid gap-6 md:grid-cols-2">
+          <div class="rounded-2xl bg-white/5 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.10)]">
+            <p class="text-sm font-semibold">Mennyire „súlytalanság” a súlytalanság?</p>
+            <p class="mt-2 text-sm text-white/70">
+              Pályán folyamatosan esel a Föld felé, miközben elég gyorsan haladsz oldalra is — ezért lebegsz.
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white/5 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.10)]">
+            <p class="text-sm font-semibold">Mi a legnagyobb veszély?</p>
+            <p class="mt-2 text-sm text-white/70">
+              Rövid távon a launch/return fázis a legkockázatosabb. Hosszabb távon a sugárzás és az ellátmány.
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white/5 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.10)]">
+            <p class="text-sm font-semibold">Mit jelent a „free return” pálya?</p>
+            <p class="mt-2 text-sm text-white/70">
+              Olyan Hold‑kerülő út, amely nagyobb hajtóműhiba esetén is természetes módon visszahoz a Földhöz.
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white/5 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.10)]">
+            <p class="text-sm font-semibold">Miért olyan drága?</p>
+            <p class="mt-2 text-sm text-white/70">
+              A tömeg minden kilogrammja drága a pályára jutásnál. A biztonsági redundancia és tesztelés is sokat
+              számít.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="cta" class="mx-auto max-w-6xl px-4 pb-20 pt-6">
+        <div class="rounded-[2rem] bg-gradient-to-br from-violet-500/20 via-fuchsia-500/15 to-cyan-400/15 p-1">
+          <div class="rounded-[1.9rem] bg-slate-950/70 p-8 shadow-[0_0_0_1px_rgba(255,255,255,0.10)] md:p-10">
+            <div class="grid items-center gap-8 md:grid-cols-2">
+              <div>
+                <h2 class="text-2xl font-extrabold tracking-tight md:text-3xl">Készen állsz a következő nagy ugrásra?</h2>
+                <p class="mt-3 text-sm leading-relaxed text-white/70">
+                  Ha szeretnéd, hozzáadok interaktív részeket is (animált csillagmező, küldetés‑szimulátor, űrhajó
+                  „útvonaltervező”).
+                </p>
+              </div>
+              <div class="flex flex-col gap-3 sm:flex-row sm:justify-end">
+                <a
+                  href="#top"
+                  class="inline-flex items-center justify-center rounded-xl bg-white/10 px-5 py-3 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(255,255,255,0.12)] hover:bg-white/15"
+                >
+                  Vissza a tetejére
+                </a>
+                <a
+                  href="#kuldetesek"
+                  class="inline-flex items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 px-5 py-3 text-sm font-semibold text-white hover:brightness-110"
+                >
+                  Tovább olvasok
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10 py-10">
+      <div class="mx-auto flex max-w-6xl flex-col gap-3 px-4 text-sm text-white/60 md:flex-row md:items-center md:justify-between">
+        <p>© <span id="year">2026</span> Kozmikus Út. Oktatási jellegű bemutató.</p>
+        <p class="text-white/40">Készült Vite + Tailwind segítségével.</p>
+      </div>
+    </footer>
+
+    <script crossorigin type="module">
+      const y = document.getElementById('year');
+      if (y) y.textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>
