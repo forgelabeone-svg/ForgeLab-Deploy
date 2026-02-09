@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <base href="/">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Grand Theft Auto sorozat - Minden ami GTA" />
+  <title>GTA Series | Grand Theft Auto</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Roboto Condensed', sans-serif;
+      background-color: #0a0a0a;
+      background-image: 
+        linear-gradient(rgba(255, 215, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 215, 0, 0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+      color: #ffffff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 0, 0, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    #root {
+      min-height: 100vh;
+      width: 100%;
+    }
+    
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+    }
+    
+    .loading-screen.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    .loading-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 4rem;
+      color: #FFD700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      animation: pulse 1.5s ease-in-out infinite;
+      text-shadow: 
+        0 0 10px rgba(255, 215, 0, 0.5),
+        0 0 20px rgba(255, 215, 0, 0.3),
+        0 0 30px rgba(255, 215, 0, 0.1);
+    }
+    
+    .loading-subtext {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 1rem;
+      color: #888;
+      margin-top: 1rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.05); }
+    }
+    
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #1a1a1a;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #FFD700;
+      border-radius: 0;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ffed4e;
+    }
+    
+    ::-moz-selection {
+      background: #FFD700;
+      color: #000;
+    }
+    
+    ::selection {
+      background: #FFD700;
+      color: #000;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/index-CB8Vj_1L.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CDbumILQ.css">
+</head>
+<body>
+  <div id="root">
+    <div class="loading-screen" id="loading">
+      <div class="loading-text">GTA Series</div>
+      <div class="loading-subtext">Betöltés...</div>
+    </div>
+  </div>
+  
+  
+  <script crossorigin type="module">
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loading = document.getElementById('loading');
+        if (loading) {
+          loading.classList.add('hidden');
+        }
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
