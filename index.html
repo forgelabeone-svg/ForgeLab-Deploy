@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="description" content="Böngészőben futtatható, telefonon is kezelhető Tetris játék">
+    <title>Tetris Játék - Böngészőben és Mobilon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        #root {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .loading {
+            color: #94a3b8;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .loading::after {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #3b82f6;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 768px) {
+            html {
+                font-size: 14px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            html {
+                font-size: 12px;
+            }
+        }
+    </style>
+  <script type="module" crossorigin src="/assets/index-C5djY17Y.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BEbvPxRh.css">
+</head>
+<body>
+    <div id="root">
+        <div class="loading">Tetris betöltése</div>
+    </div>
+</body>
+</html>
