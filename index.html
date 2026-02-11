@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programozás Alapjai</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .icon {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #333;
+            color: white;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Programozás Alapjai</h1>
+        <p>Ismerkedj meg a digitális világ nyelvével</p>
+    </header>
+
+    <main>
+        <section id="mi-a-programozas">
+            <h2><span class="icon">💻</span>Mi a programozás?</h2>
+            
+            <p>A programozás az a folyamat, amelynek során utasításokat adunk a számítógépnek, hogy az bizonyos feladatokat hajtson végre. Gondolj úgy a programozásra, mint egy recept írására: pontosan leírod, milyen lépéseket kell követnie a "szakácsnak" (a számítógépnek) ahhoz, hogy a kívánt eredményt elérje.</p>
+            
+            <div class="highlight-box">
+                <strong>Definíció:</strong> A programozás során különböző programozási nyelvek segítségével algoritmusokat és logikai utasítássorozatokat hozunk létre, amelyeket a számítógép végre tud hajtani.
+            </div>
+
+            <h3>Hogyan működik?</h3>
+            <p>A számítógépek gépi kódot "beszélnek" - ez bináris számokból (0 és 1) áll. Mivel az emberek számára ez nehezen érthető, programozási nyelveket hoztunk létre, amelyek közelebb állnak az emberi gondolkodásmódhoz:</p>
+            
+            <ul>
+                <li><strong>Magasszintű nyelvek:</strong> C#, Python, JavaScript - ezeket könnyebb megérteni és írni</li>
+                <li><strong>Fordítás/Értelmezés:</strong> A kódunkat magyarázatokkal látják el más programok, hogy a gép megértse</li>
+                <li><strong>Végrehajtás:</strong> A processzor elvégzi az utasításokat</li>
+            </ul>
+
+            <h3>Mi mindent lehet programozni?</h3>
+            <p>A programozás nem csak weboldalakat és mobilalkalmazásokat jelent. Programozunk mikrohullámú sütőket, autók fedélzeti rendszereit, űrszondákat, orvosi műszereket, játékokat és mesterséges intelligenciákat is. Gyakorlatilag minden elektronikus eszköz mögött áll valamilyen kód.</p>
+        </section>
+
+        <section id="miert-fontos">
+            <h2><span class="icon">🚀</span>Miért fontos?</h2>
+            
+            <p>A 21. században a programozás olyan alapkészséggé vált, mint az írás-olvasás. Nem kell mindenkinek professzionális fejlesztővé válnia, de a digitális gondolkodásmód és a technológia megértése elengedhetetlen a modern élethez.</p>
+
+            <h3>1. Karrierlehetőségek</h3>
+            <p>A technológiai szektor az egyik leggyorsabban növekvő iparág világszerte. Programozói végzettséggel szoftverfejlesztő, adattudós, rendszertervező, IT-biztonsági szakember vagy akár független alkalmazásfejlesztő is válhat belőled. A kereslet folyamatosan magas, a fizetések versenyképesek.</p>
+
+            <h3>2. Problémamegoldó készség</h3>
+            <p>A programozás tanít logikusan gondolkodni, bonyolult problémákat kisebb, kezelhető részekre bontani, és rendszerező módon közelíteni a kihívásokhoz. Ezek a készségek nem csak a számítógép előtt, hanem az élet minden területén hasznosak.</p>
+
+            <div class="highlight-box">
+                <strong>Gondolkodásmód:</strong> A "computational thinking" (számítási gondolkodás) segít strukturálni a gondolatainkat és hatékony megoldásokat találni bármilyen problémára.
+            </div>
+
+            <h3>3. Kreativitás és alkotás</h3>
+            <p>A programozás egy kreatív folyamat. Egy ötletből valós, működő alkalmazást hozhatsz létre. Akár egy játékot, akár egy vállalkozást segítő eszközt, akár egy művészeti installációt szeretnél készíteni, a kód az eszközöd az alkotáshoz.</p>
+
+            <h3>4. A jövő nyelve</h3>
+            <p>Mesterséges intelligencia, robotika, kvantumszámítástechnika, IoT (Internet of Things) - ezek azok a területek, amelyek formálják a jövőnket. Ezek megértéséhez és alakításához elengedhetetlen a programozási ismeret. Aki érti a technológia működését, az nem csak fogyasztója, hanem formálója is lehet a jövőnek.</p>
+
+            <h3>5. Rugalmasság és távoli munka</h3>
+            <p>A programozás egyik nagy előnye, hogy helytől függetlenül végezhető. Egy laptop és internetkapcsolat segítségével bárhonnan dolgozhatsz - legyen szó kávézóról, tengerpartról vagy a saját otthonodról.</p>
+        </section>
+
+        <section id="kovetkezolepes">
+            <h2><span class="icon">🎯</span>Hogyan kezdj hozzá?</h2>
+            <p>Ha érdekel a programozás, kezdj egy egyszerű nyelvvel, mint a Python vagy a JavaScript! Fontos, hogy gyakorolj: próbálj ki kisebb projekteket, oldj meg feladatokat, és ne félj hibázni - a hibák elkerülhetetlen részei a tanulási folyamatnak.</p>
+            <p>Üdvözöljük a kódolás világában, Józsi! Ha C# fejlesztőként szeretnél elmélyülni, a .NET ökoszisztéma kiváló választás professzionális alkalmazások fejlesztéséhez.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Programozás Alapjai. Minden jog fenntartva.</p>
+    </footer>
+
+</body>
+</html>
