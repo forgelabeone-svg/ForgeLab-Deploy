@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <base href="/">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="NexusFlow - Coming Soon. A jövő digitális megoldásai hamarosan itt!" />
+    <meta name="author" content="NexusFlow" />
+    <meta name="theme-color" content="#0ff0fc" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nexusflow.hu/" />
+    <meta property="og:title" content="NexusFlow - Coming Soon" />
+    <meta property="og:description" content="A jövő digitális megoldásai hamarosan itt! Cyberpunk stílusú landing page." />
+    <meta property="og:image" content="https://placehold.co/1200x630/0a0a0f/0ff0fc?text=NexusFlow" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://nexusflow.hu/" />
+    <meta property="twitter:title" content="NexusFlow - Coming Soon" />
+    <meta property="twitter:description" content="A jövő digitális megoldásai hamarosan itt! Cyberpunk stílusú landing page." />
+    <meta property="twitter:image" content="https://placehold.co/1200x630/0a0a0f/0ff0fc?text=NexusFlow" />
+    
+    <title>NexusFlow - Coming Soon</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Google Fonts - Orbitron for cyberpunk feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <style>
+      /* Cyberpunk Reset & Base Styles */
+      *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      :root {
+        --cyber-black: #0a0a0f;
+        --cyber-dark: #12121a;
+        --cyber-cyan: #00f0ff;
+        --cyber-cyan-dim: #00b8c4;
+        --cyber-pink: #ff00aa;
+        --cyber-pink-dim: #c40088;
+        --cyber-yellow: #f0ff00;
+        --cyber-purple: #9d00ff;
+        --cyber-green: #00ff66;
+      }
+      
+      html {
+        font-size: 16px;
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        font-family: 'Rajdhani', sans-serif;
+        background-color: var(--cyber-black);
+        color: #e0e0e0;
+        min-height: 100vh;
+        overflow-x: hidden;
+        line-height: 1.6;
+      }
+      
+      /* Scanline overlay effect */
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+        background: repeating-linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.1) 0px,
+          rgba(0, 0, 0, 0.1) 1px,
+          transparent 1px,
+          transparent 2px
+        );
+      }
+      
+      /* Loader Styles */
+      .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--cyber-black);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        transition: opacity 0.5s ease-out;
+      }
+      
+      body.react-loaded .loader {
+        opacity: 0;
+        pointer-events: none;
+      }
+      
+      .loader-content {
+        text-align: center;
+      }
+      
+      .loader-text {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1.5rem;
+        letter-spacing: 0.5em;
+        margin-bottom: 1rem;
+        animation: pulse 1.5s ease-in-out infinite;
+      }
+      
+      .glow-cyan {
+        color: var(--cyber-cyan);
+        text-shadow: 0 0 10px var(--cyber-cyan), 0 0 20px var(--cyber-cyan), 0 0 40px var(--cyber-cyan);
+      }
+      
+      .loader-bar {
+        width: 200px;
+        height: 4px;
+        background: var(--cyber-dark);
+        border: 1px solid var(--cyber-cyan-dim);
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .loader-bar::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, var(--cyber-cyan), transparent);
+        animation: loading 1.5s ease-in-out infinite;
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+      
+      @keyframes loading {
+        0% { left: -100%; }
+        100% { left: 100%; }
+      }
+      
+      /* Hide loader when React is loaded */
+      body.react-loaded .loader {
+        display: none;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-BDCajkPf.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-PgSmNP_M.css">
+  </head>
+  <body>
+    <div class="loader">
+      <div class="loader-content">
+        <div class="loader-text glow-cyan">INITIALIZING</div>
+        <div class="loader-bar"></div>
+      </div>
+    </div>
+    
+    <div id="root"></div>
+    
+    
+    <script crossorigin type="module">
+      // Hide loader after page load
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          document.body.classList.add('react-loaded');
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
