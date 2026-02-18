@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Forge Lab Brain - Cyberpunk AI Orchestration Visualizer. Live visualization of multi-phase, multi-agent AI workflow processing." />
+    <meta name="theme-color" content="#0a0a0f" />
+    <meta name="color-scheme" content="dark" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Forge Lab Brain | AI Orchestration Visualizer" />
+    <meta property="og:description" content="Live visualization of the Forge Lab Brain processing complex requests through multi-phase, multi-agent workflow." />
+    <meta property="og:type" content="website" />
+    <meta property="og:theme-color" content="#00f0ff" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Forge Lab Brain | AI Orchestration Visualizer" />
+    <meta name="twitter:description" content="Live visualization of the Forge Lab Brain processing complex requests through multi-phase, multi-agent workflow." />
+    
+    <title>Forge Lab Brain | Cyberpunk AI Orchestration</title>
+    
+    <!-- Cyberpunk Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+    
+    <style>
+      /* Critical CSS for initial load - prevents flash of unstyled content */
+      html {
+        background-color: #0a0a0f;
+        color: #e0e0e0;
+        font-family: 'Rajdhani', sans-serif;
+      }
+      
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Custom scrollbar - cyberpunk style */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: #0a0a0f;
+        border-left: 1px solid #1a1a2e;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #00f0ff 0%, #7b2cbf 100%);
+        border-radius: 4px;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #00f0ff 0%, #ff00ff 100%);
+      }
+      
+      /* Selection styling */
+      ::-moz-selection {
+        background: rgba(0, 240, 255, 0.3);
+        color: #ffffff;
+      }
+      ::selection {
+        background: rgba(0, 240, 255, 0.3);
+        color: #ffffff;
+      }
+      
+      /* Initial loading state */
+      #root:empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #0a0a0f;
+      }
+      
+      #root:empty::after {
+        content: '';
+        width: 60px;
+        height: 60px;
+        border: 3px solid #1a1a2e;
+        border-top-color: #00f0ff;
+        border-right-color: #7b2cbf;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-CIbX3N5X.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Be_cq0Hp.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
