@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Web-based simulator demonstrating a self-healing AI development pipeline with real-time visualization" />
+    <meta name="theme-color" content="#0f0f1a" />
+    <meta name="robots" content="noindex, nofollow" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Self-Healing AI Pipeline Simulator" />
+    <meta property="og:description" content="Interactive visualization of AI-driven development workflows with automatic error correction" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>" />
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <title>Self-Healing AI Pipeline Simulator</title>
+    
+    <!-- Loading styles to prevent FOUC -->
+    <style>
+      body {
+        margin: 0;
+        background-color: #0f0f1a;
+      }
+      #root {
+        min-height: 100vh;
+      }
+      /* Initial loading state */
+      .initial-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #0f0f1a;
+        z-index: 9999;
+      }
+      .loader-pulse {
+        width: 48px;
+        height: 48px;
+        border: 3px solid #1a1a2e;
+        border-top-color: #6366f1;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-B5t1BHRg.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-t9sHxY0u.css">
+  </head>
+  <body>
+    <!-- Initial loader until React mounts -->
+    <div id="initial-loader" class="initial-loader">
+      <div class="loader-pulse"></div>
+    </div>
+    
+    <div id="root"></div>
+    
+    
+    <!-- Remove loader after React mounts -->
+    <script crossorigin type="module">
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          var loader = document.getElementById('initial-loader');
+          if (loader) {
+            loader.style.opacity = '0';
+            loader.style.transition = 'opacity 0.3s ease';
+            setTimeout(function() {
+              loader.remove();
+            }, 300);
+          }
+        }, 100);
+      });
+    </script>
+  </body>
+</html>
