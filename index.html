@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Forge Lab Brain - Autonomous Multi-Phase AI Orchestration Engine" />
+    <meta name="theme-color" content="#0a0a0f" />
+    <meta name="color-scheme" content="dark" />
+    <title>Forge Lab Brain | AI Orchestration Engine</title>
+    
+    <!-- Cyberpunk Font: Orbitron for headers, JetBrains Mono for code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+      /* Critical CSS for initial load - prevents white flash */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      html, body, #root {
+        height: 100%;
+        width: 100%;
+        background: #0a0a0f;
+      }
+      
+      body {
+        font-family: 'JetBrains Mono', monospace;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+      }
+      
+      /* Scanline overlay effect */
+      .scanlines {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+        background: repeating-linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0) 0px,
+          rgba(0, 0, 0, 0) 1px,
+          rgba(0, 0, 0, 0.03) 1px,
+          rgba(0, 0, 0, 0.03) 2px
+        );
+      }
+      
+      /* CRT screen flicker */
+      .crt-flicker {
+        animation: crtFlicker 0.15s infinite;
+      }
+      
+      @keyframes crtFlicker {
+        0% { opacity: 0.97; }
+        50% { opacity: 1; }
+        100% { opacity: 0.98; }
+      }
+      
+      /* Initial black screen for intro */
+      .intro-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .intro-overlay.fade-out {
+        animation: fadeOut 1s ease-out forwards;
+      }
+      
+      @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; visibility: hidden; }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-Bi4aY6Zo.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-AVZsvy86.css">
+  </head>
+  <body class="bg-cyber-black">
+    <!-- Scanline overlay for retro CRT effect -->
+    <div class="scanlines"></div>
+    
+    <!-- Root React container -->
+    <div id="root"></div>
+    
+    <!-- Entry point -->
+  </body>
+</html>
