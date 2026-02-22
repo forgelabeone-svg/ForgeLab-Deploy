@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Forge Lab Brain - Autonomous Multi-Phase AI Orchestration Engine" />
+    <meta name="theme-color" content="#0a0a0f" />
+    <meta name="color-scheme" content="dark" />
+    
+    <!-- X-UA-Compatible for legacy IE support -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- Production-ready CSP: removes unsafe-eval, restricts inline scripts -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data:; script-src 'self' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; connect-src 'self' https:; font-src 'self' https:;" />
+    
+    <title>Forge Lab Brain | AI Orchestration Engine</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Google Fonts - JetBrains Mono for code, Exo 2 for display -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    
+    <style>
+      /* Critical CSS for instant dark theme */
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+      html {
+        font-family: 'Exo 2', system-ui, -apple-system, sans-serif;
+        background: #0a0a0f;
+        color: #e0e0e0;
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        min-height: 100vh;
+        background: 
+          radial-gradient(ellipse at 20% 20%, rgba(0, 245, 255, 0.03) 0%, transparent 50%),
+          radial-gradient(ellipse at 80% 80%, rgba(255, 0, 255, 0.03) 0%, transparent 50%),
+          radial-gradient(ellipse at 50% 50%, rgba(138, 43, 226, 0.02) 0%, transparent 70%),
+          linear-gradient(180deg, #0a0a0f 0%, #0d0d14 50%, #0a0a0f 100%);
+        background-attachment: fixed;
+        overflow-x: hidden;
+      }
+      
+      /* Base typography */
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Exo 2', system-ui, -apple-system, sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        line-height: 1.2;
+      }
+      
+      /* Glow effects for headers */
+      .glow-cyan {
+        text-shadow: 0 0 10px rgba(0, 245, 255, 0.5), 0 0 20px rgba(0, 245, 255, 0.3), 0 0 30px rgba(0, 245, 255, 0.2);
+      }
+      
+      .glow-magenta {
+        text-shadow: 0 0 10px rgba(255, 0, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.3), 0 0 30px rgba(255, 0, 255, 0.2);
+      }
+      
+      .glow-purple {
+        text-shadow: 0 0 10px rgba(138, 43, 226, 0.5), 0 0 20px rgba(138, 43, 226, 0.3), 0 0 30px rgba(138, 43, 226, 0.2);
+      }
+      
+      /* Monospace for code/data */
+      .font-mono {
+        font-family: 'JetBrains Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-D-8z6FKy.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B12KiXPj.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
