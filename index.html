@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <base href="/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0f" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="CYBERPUNK Dashboard - Neural interface for data visualization and system monitoring" />
+    <title>CYBERPUNK // Dashboard v2.077</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #0a0a0f;
+        min-height: 100vh;
+        font-family: 'Courier New', 'SF Mono', 'Fira Code', monospace;
+      }
+      #root {
+        min-height: 100vh;
+      }
+      #root:empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%);
+      }
+      #root:empty::before {
+        content: 'INITIALIZING NEURAL INTERFACE...';
+        position: absolute;
+        color: #00f0ff;
+        font-size: 1rem;
+        letter-spacing: 0.2em;
+        text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 40px #00f0ff;
+        animation: glitch 2s ease-in-out infinite;
+      }
+      #root:empty::after {
+        content: '';
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border: 2px solid #00f0ff;
+        border-radius: 50%;
+        animation: rotate 3s linear infinite, pulse-ring 1.5s ease-in-out infinite;
+        box-shadow: 0 0 20px #00f0ff, inset 0 0 20px rgba(0, 240, 255, 0.1);
+      }
+      @keyframes glitch {
+        0%, 100% { opacity: 1; transform: translateX(0); }
+        20% { opacity: 0.8; transform: translateX(-2px); }
+        40% { opacity: 1; transform: translateX(2px); }
+        60% { opacity: 0.9; transform: translateX(-1px); }
+        80% { opacity: 1; transform: translateX(1px); }
+      }
+      @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes pulse-ring {
+        0%, 100% { opacity: 0.5; transform: rotate(0deg) scale(1); }
+        50% { opacity: 1; transform: rotate(180deg) scale(1.1); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #root:empty::before,
+        #root:empty::after {
+          animation: none;
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index--Qbv47z2.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-C-GQ7HMA.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
