@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <base href="/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="React programozás bemutatása cyberpunk stílusban - Komponensek, Hook-ok, State management és még sok más" />
+    <meta name="theme-color" content="#0a0a0f" />
+    <title>⚡ REACT // CYBERPUNK DEMO | Programozás a Jövőből</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        background: #0a0a0f;
+        background-image: 
+          linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+          radial-gradient(ellipse at 50% 0%, rgba(120, 0, 255, 0.15) 0%, transparent 50%),
+          radial-gradient(ellipse at 80% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 40%),
+          radial-gradient(ellipse at 20% 80%, rgba(255, 0, 128, 0.1) 0%, transparent 40%);
+        background-size: 50px 50px, 50px 50px, 100% 100%, 100% 100%, 100% 100%;
+        min-height: 100vh;
+        font-family: 'Rajdhani', sans-serif;
+        color: #e0e0e0;
+        overflow-x: hidden;
+      }
+      
+      #root {
+        min-height: 100vh;
+        position: relative;
+      }
+      
+      #root::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+          repeating-linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.15) 0px,
+            rgba(0, 0, 0, 0.15) 1px,
+            transparent 1px,
+            transparent 2px
+          );
+        pointer-events: none;
+        z-index: 9999;
+        animation: scanline 8s linear infinite;
+      }
+      
+      @keyframes scanline {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(10px); }
+      }
+      
+      ::-moz-selection {
+        background: rgba(0, 255, 255, 0.3);
+        color: #00ffff;
+        text-shadow: 0 0 10px #00ffff;
+      }
+      
+      ::selection {
+        background: rgba(0, 255, 255, 0.3);
+        color: #00ffff;
+        text-shadow: 0 0 10px #00ffff;
+      }
+      
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: #0a0a0f;
+        border-left: 1px solid rgba(0, 255, 255, 0.2);
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #00ffff, #7800ff);
+        border-radius: 0;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #00ffff, #ff0080);
+      }
+      
+      .cyber-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0a0a0f;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+      }
+      
+      .cyber-loader.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+      
+      .cyber-loader-title {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #00ffff;
+        text-shadow: 
+          0 0 10px #00ffff,
+          0 0 20px #00ffff,
+          0 0 40px #00ffff;
+        letter-spacing: 0.3em;
+        margin-bottom: 2rem;
+        animation: glitch 2s infinite;
+      }
+      
+      .cyber-loader-bar {
+        width: 300px;
+        height: 4px;
+        background: rgba(0, 255, 255, 0.1);
+        border: 1px solid rgba(0, 255, 255, 0.3);
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .cyber-loader-bar::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, #00ffff, transparent);
+        animation: loading 1.5s infinite;
+      }
+      
+      @keyframes loading {
+        0% { left: -100%; }
+        100% { left: 100%; }
+      }
+      
+      @keyframes glitch {
+        0%, 90%, 100% { transform: translate(0); }
+        92% { transform: translate(-2px, 1px); }
+        94% { transform: translate(2px, -1px); }
+        96% { transform: translate(-1px, -1px); }
+        98% { transform: translate(1px, 1px); }
+      }
+      
+      .cyber-loader-subtitle {
+        font-family: 'Share Tech Mono', monospace;
+        color: rgba(0, 255, 255, 0.6);
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.2em;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-D0fqVi8h.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BDkUbeNn.css">
+  </head>
+  <body>
+    <div class="cyber-loader" id="cyber-loader">
+      <div class="cyber-loader-title">REACT</div>
+      <div class="cyber-loader-bar"></div>
+      <div class="cyber-loader-subtitle">INITIALIZING CYBERPUNK INTERFACE...</div>
+    </div>
+    <div id="root"></div>
+    <script crossorigin type="module">
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          var loader = document.getElementById('cyber-loader');
+          if (loader) {
+            loader.classList.add('hidden');
+            setTimeout(function() {
+              loader.remove();
+            }, 500);
+          }
+        }, 800);
+      });
+    </script>
+  </body>
+</html>
