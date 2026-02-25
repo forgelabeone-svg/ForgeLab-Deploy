@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FutureTech Lab</title>
+  <meta name="description" content="FutureTech Lab - futurisztikus, interaktív technológiai idővonal 1800 és 2050 között." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Háttér dekor elemek (vizuális glow effektekhez) -->
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+  <!-- Fő fejléc -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#" class="brand">
+        <span class="brand-mark">◉</span>
+        <span>FutureTech Lab</span>
+      </a>
+
+      <nav class="top-nav" aria-label="Fő navigáció">
+        <a href="#timeline">Idővonal</a>
+        <a href="#fact">Tech Fact</a>
+      </nav>
+
+      <!-- Téma váltó (Dark/Light) -->
+      <button id="themeToggle" class="btn btn-outline" aria-label="Téma váltása">
+        🌙 Dark / ☀️ Light
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero szekció -->
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">Innováció • Jövő • Felfedezés</p>
+          <h1>FutureTech Lab</h1>
+          <p class="lead">
+            Merülj el a technológia fejlődésében 1800-tól 2050-ig egy modern, interaktív idővonalon.
+            Kattints bármely eseményre a részletekért.
+          </p>
+          <a href="#timeline" class="btn btn-primary">Felfedezés indítása</a>
+        </div>
+
+        <div class="hero-card reveal delay-1" aria-hidden="true">
+          <div class="scanline"></div>
+          <h2>Timeline Core</h2>
+          <p>Adatpontok: <span id="eventCount">0</span></p>
+          <p>Tartomány: 1800 → 2050</p>
+          <div class="pulse-dot"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interaktív idővonal -->
+    <section id="timeline" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Interaktív Technológiai Idővonal</h2>
+          <p>Kattints egy évszámra a részletes információkhoz.</p>
+        </div>
+
+        <!-- A timeline elemeket JavaScript tölti be -->
+        <div id="timelineList" class="timeline" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Random tech fact -->
+    <section id="fact" class="section">
+      <div class="container">
+        <div class="fact-box reveal">
+          <h2>Random Tech Fact</h2>
+          <p id="factText">Nyomd meg a gombot egy technológiai érdekességért!</p>
+          <button id="factBtn" class="btn btn-primary">Adj egy random factet</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="yearNow"></span> FutureTech Lab • Built with HTML, CSS & Vanilla JavaScript</p>
+    </div>
+  </footer>
+
+  <!-- Modal: ide kerül az idővonal esemény részletes nézete -->
+  <div id="eventModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-overlay" data-close-modal="true"></div>
+
+    <div class="modal-content" role="document">
+      <button class="modal-close" id="closeModalBtn" aria-label="Modal bezárása">✕</button>
+
+      <div class="modal-image">
+        <!-- Placeholder képterület -->
+        <div id="modalImagePlaceholder" class="image-placeholder">
+          <span>Kép helye</span>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <p id="modalYear" class="modal-year"></p>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription"></p>
+
+        <div class="importance">
+          <h4>Miért fontos?</h4>
+          <p id="modalImportance"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript külön fájlban -->
+  <script src="script.js"></script>
+</body>
+</html>
