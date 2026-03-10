@@ -1,0 +1,6 @@
+{
+  "name": "static-project",
+  "scripts": {
+    "dev": "npx serve -l 3000"
+  }
+}
