@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexaCore - Next-Gen Tech Solutions</title>
+  <meta name="description" content="Transform your business with cutting-edge technology solutions. NexaCore delivers innovation at scale.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-particles" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav-logo">
+        <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M16 2L28 9V23L16 30L4 23V9L16 2Z" stroke="url(#logo-gradient)" stroke-width="2" fill="none"/>
+          <path d="M16 10L22 14V22L16 26L10 22V14L16 10Z" fill="url(#logo-gradient)"/>
+          <defs>
+            <linearGradient id="logo-gradient" x1="4" y1="2" x2="28" y2="30">
+              <stop offset="0%" stop-color="#3b82f6"/>
+              <stop offset="100%" stop-color="#8b5cf6"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="logo-text">NexaCore</span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+        <li class="nav-item"><a href="#how-it-works" class="nav-link">How It Works</a></li>
+        <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
+        <li class="nav-item nav-cta"><a href="#cta" class="btn btn-gradient">Get Started</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO Section -->
+    <section class="hero section" id="hero">
+      <div class="container hero-content">
+        <div class="hero-badge fade-in">
+          <span class="badge-pulse"></span>
+          <span class="badge-text">🚀 Now in Public Beta</span>
+        </div>
+        
+        <h1 class="hero-title fade-in">
+          Build the Future with
+          <span class="gradient-text">Next-Gen Technology</span>
+        </h1>
+        
+        <p class="hero-subtitle fade-in">
+          Transform your ideas into reality with our cutting-edge platform. 
+          Deploy faster, scale smarter, and innovate without limits.
+        </p>
+        
+        <div class="hero-cta fade-in">
+          <a href="#cta" class="btn btn-gradient">Start Free Trial</a>
+          <a href="#features" class="btn btn-outline">Learn More</a>
+        </div>
+
+        <div class="hero-stats fade-in">
+          <div class="stat">
+            <span class="stat-number">10K+</span>
+            <span class="stat-label">Active Users</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">99.9%</span>
+            <span class="stat-label">Uptime</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">50ms</span>
+            <span class="stat-label">Avg Response</span>
+          </div>
+        </div>
+
+        <div class="hero-code fade-in">
+          <div class="code-window">
+            <div class="code-header">
+              <span class="code-dot"></span>
+              <span class="code-dot"></span>
+              <span class="code-dot"></span>
+              <span class="code-title">terminal</span>
+            </div>
+            <pre class="code-content"><code><span class="code-comment"># Deploy your app in seconds</span>
+<span class="code-command">npx</span> nexacore deploy --prod
+
+<span class="code-output">✓ Building project...</span>
+<span class="code-output">✓ Optimizing assets...</span>
+<span class="code-success">✓ Deployed to https://your-app.nexacore.io</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES Section -->
+    <section class="features section" id="features">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-tag">Features</span>
+          <h2 class="section-title">Everything You Need to <span class="gradient-text">Scale</span></h2>
+          <p class="section-subtitle">Powerful tools designed for modern development workflows</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card glass-card fade-in">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Lightning Fast</h3>
+            <p class="feature-description">Deploy in milliseconds with our global edge network. Experience sub-50ms response times worldwide.</p>
+          </div>
+
+          <div class="feature-card glass-card fade-in">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <line x1="3" y1="9" x2="21" y2="9"/>
+                <line x1="9" y1="21" x2="9" y2="9"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Developer First</h3>
+            <p class="feature-description">Intuitive APIs, comprehensive SDKs, and detailed documentation built by developers, for developers.</p>
+          </div>
+
+          <div class="feature-card glass-card fade-in">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Enterprise Security</h3>
+            <p class="feature-description">Bank-grade encryption, SOC2 compliance, and advanced threat protection for your peace of mind.</p>
+          </div>
+
+          <div class="feature-card glass-card fade-in">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="20" x2="12" y2="10"/>
+                <line x1="18" y1="20" x2="18" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="16"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Real-time Analytics</h3>
+            <p class="feature-description">Monitor performance, track usage, and gain insights with our powerful analytics dashboard.</p>
+          </div>
+
+          <div class="feature-card glass-card fade-in">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Auto Scaling</h3>
+            <p class="feature-description">Automatically scale resources up or down based on demand. Pay only for what you use.</p>
+          </div>
+
+          <div class="feature-card glass-card fade-in">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Team Collaboration</h3>
+            <p class="feature-description">Built-in collaboration tools, role-based access control, and real-time sync for your team.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS Section -->
+    <section class="how-it-works section" id="how-it-works">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-tag">How It Works</span>
+          <h2 class="section-title">Get Started in <span class="gradient-text">3 Simple Steps</span></h2>
+          <p class="section-subtitle">From zero to production in minutes, not days</p>
+        </div>
+
+        <div class="steps-container">
+          <div class="step fade-in">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <h3 class="step-title">Connect Your Project</h3>
+              <p class="step-description">Import your existing project from GitHub, GitLab, or start from scratch with our templates.</p>
+            </div>
+          </div>
+
+          <div class="step-connector" aria-hidden="true"></div>
+
+          <div class="step fade-in">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <h3 class="step-title">Configure & Customize</h3>
+              <p class="step-description">Set your environment variables, configure domains, and customize your deployment settings.</p>
+            </div>
+          </div>
+
+          <div class="step-connector" aria-hidden="true"></div>
+
+          <div class="step fade-in">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <h3 class="step-title">Deploy & Scale</h3>
+              <p class="step-description">Push to deploy. We handle the rest — automatic SSL, CDN, scaling, and monitoring.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING Section -->
+    <section class="pricing section" id="pricing">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-tag">Pricing</span>
+          <h2 class="section-title">Simple, Transparent <span class="gradient-text">Pricing</span></h2>
+          <p class="section-subtitle">Start free, scale as you grow. No hidden fees.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="pricing-card glass-card fade-in">
+            <div class="pricing-header">
+              <h3 class="pricing-tier">Free</h3>
+              <div class="pricing-price">
+                <span class="price-currency">$</span>
+                <span class="price-amount">0</span>
+                <span class="price-period">/month</span>
+              </div>
+              <p class="pricing-description">Perfect for side projects and experimentation</p>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature">
+                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>3 Projects</span>
+              </li>
+              <li class="pricing-feature">
+                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>1GB Storage</span>
+              </li>
+              <li class="pricing-feature">
+                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>100GB Bandwidth</span>
+              </li>
+              <li class="pricing-feature">
+                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Community Support</span>
+              </li>
+            </ul>
+            <a href="#cta" class="btn btn-outline btn-full">Get Started</a>
+          </div>
+
+          <div class="pricing-card pricing-card-featured glass-card fade-in">
+            <div class="pricing-badge">Most Popular</div>
+            <div class="pricing-header">
+              <h3 class="pricing-tier">Pro</h3>
+              <div class="pricing-price">
+                <span class="price-currency">$</span>
+                <span class="price-amount">29</span>
+                <span class="price-period">/month</span>
+              </div>
+              <p class="pricing-description">For growing teams and production apps</p>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature">
+                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Unlimited Projects</span>
+              </li>
+              <li class="pricing-feature">
+                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>50GB Storage</span>
+              </li>
+              <li class="pricing-feature">
+                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>1TB Bandwidth</span>
+              </li>
+              <li class="pricing-feature">
+                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Priority Support</span>
+              </li>
+              <li class="pricing-feature">
+                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Custom Domains</span>
+              </li>
+            </ul>
+            <a href="#cta" class="btn btn-gradient btn-full">Get Started</a>
+          </div>
+
+          <div class="pricing-card glass-card fade-in">
+            <div class="pricing-header">
+              <h3 class="pricing-tier">Enterprise</h3>
+              <div class="pricing-price">
+                <span class="price-amount">Custom</span>
+              </div>
+              <p class="pricing-description">For large teams with specific needs</p>
+            </div>
+            <ul class="pricing-features">
+              <li class="pricing-feature">
+                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Everything in Pro</span>
+              </li>
+              <li class="pricing-feature">
+                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Unlimited Storage</span>
+              </li>
+              <li class="pricing-feature">
+                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Dedicated Support</span>
+              </li>
+              <li class="pricing-feature">
+                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>SLA Guarantee</span>
+              </li>
+              <li class="pricing-feature">
+                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Custom Integrations</span>
+              </li>
+            </ul>
+            <a href="#cta" class="btn btn-outline btn-full">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS Section -->
+    <section class="testimonials section" id="testimonials">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-tag">Testimonials</span>
+          <h2 class="section-title">Loved by <span class="gradient-text">Developers</span></h2>
+          <p class="section-subtitle">See what our users have to say about NexaCore</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card glass-card fade-in">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">AK</div>
+              <div class="testimonial-info">
+                <h4 class="testimonial-name">Alex Kim</h4>
+                <p class="testimonial-role">CTO at TechStart</p>
+              </div>
+            </div>
+            <p class="testimonial-quote">"NexaCore transformed our deployment workflow. What used to take hours now takes seconds. The DX is absolutely incredible."</p>
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card fade-in">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">SR</div>
+              <div class="testimonial-info">
+                <h4 class="testimonial-name">Sarah Rodriguez</h4>
+                <p class="testimonial-role">Lead Developer at AppWorks</p>
+              </div>
+            </div>
+            <p class="testimonial-quote">"The auto-scaling feature saved us during our product launch. Traffic spiked 10x and NexaCore handled it flawlessly. Best decision we made."</p>
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card fade-in">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">MJ</div>
+              <div class="testimonial-info">
+                <h4 class="testimonial-name">Michael Johnson</h4>
+                <p class="testimonial-role">Founder at DevLabs</p>
+              </div>
+            </div>
+            <p class="testimonial-quote">"We migrated from 3 different services to NexaCore. Everything in one place, better performance, and half the cost. The support team is phenomenal."</p>
+            <div class="testimonial-rating" aria-label="5 out of 5 stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER Section -->
+    <section class="cta section" id="cta">
+      <div class="container">
+        <div class="cta-content glass-bg fade-in">
+          <h2 class="cta-title">Ready to <span class="gradient-text">Transform</span> Your Workflow?</h2>
+          <p class="cta-subtitle">Join thousands of developers building the future. Start your free trial today.</p>
+          <form class="cta-form" action="#" method="POST">
+            <input type="email" class="cta-input" placeholder="Enter your email" required aria-label="Email address">
+            <button type="submit" class="btn btn-gradient cta-button">Get Started Free</button>
+          </form>
+          <p class="cta-note">No credit card required • Free tier available • Cancel anytime</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M16 2L28 9V23L16 30L4 23V9L16 2Z" stroke="url(#footer-logo-gradient)" stroke-width="2" fill="none"/>
+              <path d="M16 10L22 14V22L16 26L10 22V14L16 10Z" fill="url(#footer-logo-gradient)"/>
+              <defs>
+                <linearGradient id="footer-logo-gradient" x1="4" y1="2" x2="28" y2="30">
+                  <stop offset="0%" stop-color="#3b82f6"/>
+                  <stop offset="100%" stop-color="#8b5cf6"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <span class="logo-text">NexaCore</span>
+          </a>
+          <p class="footer-tagline">Next-gen technology solutions for modern teams.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Discord">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4 class="footer-title">Product</h4>
+          <ul class="footer-menu">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Changelog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4 class="footer-title">Company</h4>
+          <ul class="footer-menu">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4 class="footer-title">Legal</h4>
+          <ul class="footer-menu">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© 2024 NexaCore. All rights reserved. Built with ❤️ by the ForgeLab team.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
