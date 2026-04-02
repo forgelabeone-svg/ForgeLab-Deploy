@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233b82f6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'%3E%3C/path%3E%3Cpolyline points='9 22 9 12 15 12 15 22'%3E%3C/polyline%3E%3C/svg%3E" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdminForge • Dashboard</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+      
+      :root {
+        --bg: #0f1117;
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        background-color: #0f1117;
+        color: #e2e8f0;
+      }
+      
+      .loading-splash {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #0f1117;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.4s ease;
+      }
+      
+      .logo {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 28px;
+        font-weight: 600;
+        background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -0.04em;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-uymBK0IJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-64qx3FUi.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <!-- Loading splash (removed by React on mount) -->
+    <div id="splash" class="loading-splash">
+      <div class="flex flex-col items-center">
+        <div class="logo mb-3">AdminForge</div>
+        <div class="flex items-center gap-2 text-slate-400 text-sm">
+          <div class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+          <div>INITIALIZING DASHBOARD...</div>
+        </div>
+      </div>
+    </div>
+
+    <script crossorigin type="module">
+      // Remove splash once React mounts
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const splash = document.getElementById('splash');
+          if (splash) {
+            splash.style.opacity = '0';
+            setTimeout(() => {
+              splash.remove();
+            }, 400);
+          }
+        }, 420);
+      });
+    </script>
+  </body>
+</html>
