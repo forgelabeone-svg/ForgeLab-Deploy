@@ -1,0 +1,25 @@
+{
+  "name": "trinexus-developer-companion",
+  "version": "1.4.0",
+  "description": "Trinexus Developer Companion — internal developer dashboard for Chrome Extension and UNAS webshop API management. BEOCIA Kft. / Trinexus Aqua internal tool.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 3000",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 3000"
+  },
+  "keywords": [
+    "trinexus",
+    "beocia",
+    "unas",
+    "chrome-extension",
+    "developer-tool",
+    "internal"
+  ],
+  "author": "BEOCIA Kft.",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "vite": "^5.2.0"
+  }
+}

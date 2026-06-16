@@ -1,0 +1,40 @@
+# Trinexus Developer Companion — Python Dependencies
+# BEOCIA Kft. / Trinexus Aqua — Internal Developer Tool
+# Chrome Companion 1.4 / UNAS API Integration
+#
+# Install with:
+#   python3 -m venv .venv
+#   source .venv/bin/activate   # Windows: .venv\Scripts\activate
+#   pip install -r requirements.txt
+
+# HTTP clients — primary request handling
+requests>=2.31.0
+httpx>=0.27.0
+
+# XML parsing and building
+lxml>=5.2.0
+
+# Environment variable management
+python-dotenv>=1.0.1
+
+# CLI interface for main.py commands
+click>=8.1.7
+
+# Optional local API bridge (Flask or FastAPI)
+flask>=3.0.3
+fastapi>=0.111.0
+uvicorn[standard]>=0.30.1
+
+# Icon generation for Chrome Extension (scripts/generate_icons.py)
+Pillow>=10.3.0
+
+# Testing framework
+pytest>=8.2.0
+pytest-mock>=3.14.0
+responses>=0.25.3
+
+# Logging and utilities
+rich>=13.7.1
+
+
+// [FL:DONE]

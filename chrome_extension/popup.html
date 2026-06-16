@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trinexus Developer Companion</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="popup-root">
+
+    <!-- Header -->
+    <header class="popup-header">
+      <div class="header-brand">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Smart Tab Manager</span>
+          <span class="brand-sub">Trinexus Developer Companion</span>
+        </div>
+      </div>
+      <div class="header-badge">
+        <span id="tab-count-badge" class="badge">0</span>
+        <span class="badge-label">tabs</span>
+      </div>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <div class="search-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </div>
+      <input
+        type="text"
+        id="search-input"
+        class="search-input"
+        placeholder="Filter tabs by title or URL…"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <button id="search-clear" class="search-clear" title="Clear search" aria-label="Clear search">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Tab Count Info -->
+    <div class="tab-info-bar">
+      <span id="tab-info-text" class="tab-info-text">Loading tabs…</span>
+      <button id="refresh-btn" class="refresh-btn" title="Refresh tab list" aria-label="Refresh">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="23 4 23 10 17 10"/>
+          <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+        </svg>
+        Refresh
+      </button>
+    </div>
+
+    <!-- Tab List -->
+    <div class="tab-list-container">
+      <ul id="tab-list" class="tab-list" role="list" aria-label="Open tabs">
+        <li class="tab-loading">
+          <div class="spinner"></div>
+          <span>Loading open tabs…</span>
+        </li>
+      </ul>
+      <div id="no-tabs-msg" class="no-tabs-msg hidden">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#374151" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <p>No tabs match your search.</p>
+      </div>
+    </div>
+
+    <!-- Session Controls -->
+    <div class="session-panel">
+      <div class="session-header">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+          <polyline points="17 21 17 13 7 13 7 21"/>
+          <polyline points="7 3 7 8 15 8"/>
+        </svg>
+        <span>Sessions</span>
+      </div>
+
+      <div class="session-save-row">
+        <input
+          type="text"
+          id="session-name-input"
+          class="session-name-input"
+          placeholder="Session name…"
+          maxlength="40"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button id="save-session-btn" class="btn btn-primary" title="Save current session">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+            <polyline points="17 21 17 13 7 13 7 21"/>
+            <polyline points="7 3 7 8 15 8"/>
+          </svg>
+          Save
+        </button>
+      </div>
+
+      <div id="session-status" class="session-status hidden"></div>
+
+      <ul id="session-list" class="session-list" role="list" aria-label="Saved sessions">
+        <!-- Sessions rendered by popup.js -->
+      </ul>
+
+      <div id="no-sessions-msg" class="no-sessions-msg">
+        <span>No saved sessions yet.</span>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="popup-footer">
+      <span>BEOCIA Kft. · Trinexus Aqua</span>
+      <span class="footer-version">v1.4.0</span>
+    </footer>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
