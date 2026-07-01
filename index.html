@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Star Citizen Ship Comparison Tool — compare ship specifications side by side. Filter by manufacturer, type, and size. Built for UEE pilots and fleet commanders." />
+    <meta name="keywords" content="Star Citizen, ship comparison, UEE, RSI, Aegis, Anvil, Drake, ship specs, SCM speed, cargo capacity, fleet planning" />
+    <meta name="author" content="ForgeLab" />
+    <meta name="theme-color" content="#0a0e1a" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Star Citizen Ship Comparison Tool" />
+    <meta property="og:description" content="Compare Star Citizen ships side by side. Filter, sort, and analyze ship specifications for fleet planning." />
+    <meta property="og:type" content="website" />
+
+    <!-- Sci-Fi / HUD Fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>NAVCOM — Star Citizen Ship Comparison</title>
+
+    <style>
+      /* CSS custom properties for sci-fi theme available globally before React hydrates */
+      :root {
+        --color-bg-violet-500: #050810;
+        --color-bg-slate-500: #0a0e1a;
+        --color-bg-gray-500: #0d1220;
+        --color-bg-panel: #0c1118;
+        --color-accent-cyan: #00d4ff;
+        --color-accent-blue: #0066ff;
+        --color-accent-green: #00ff88;
+        --color-accent-amber: #ffaa00;
+        --color-text-violet-500: #e0f0ff;
+        --color-text-slate-500: #7a9ab8;
+        --color-text-gray-500: #3a5a78;
+        --color-border: #1a3050;
+        --color-border-bright: #00d4ff44;
+        --font-display: 'Orbitron', 'Courier New', monospace;
+        --font-body: 'Exo 2', 'Segoe UI', sans-serif;
+        --font-mono: 'Share Tech Mono', 'Courier New', monospace;
+        --glow-cyan: 0 0 8px #00d4ff88, 0 0 20px #00d4ff33;
+        --glow-green: 0 0 8px #00ff8888, 0 0 20px #00ff8833;
+        --glow-blue: 0 0 8px #0066ff88, 0 0 20px #0066ff33;
+        --transition-fast: 150ms ease;
+        --transition-med: 300ms ease;
+      }
+
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        font-size: 16px;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: var(--color-bg-violet-500);
+        color: var(--color-text-violet-500);
+        font-family: var(--font-body);
+        min-height: 100vh;
+        overflow-x: hidden;
+        /* Subtle scanline overlay for HUD effect */
+        background-image:
+          repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 212, 255, 0.008) 2px,
+            rgba(0, 212, 255, 0.008) 4px
+          );
+      }
+
+      #root {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Loading state before React mounts */
+      #root:empty::before {
+        content: 'INITIALIZING NAVCOM SYSTEMS...';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        font-family: var(--font-display);
+        font-size: 0.85rem;
+        letter-spacing: 0.3em;
+        color: var(--color-accent-cyan);
+        text-shadow: var(--glow-cyan);
+        animation: pulse 1.5s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 1; }
+      }
+
+      /* Scrollbar styling for HUD aesthetic */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: var(--color-bg-slate-500);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--color-accent-cyan);
+        border-radius: 3px;
+        opacity: 0.5;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-accent-blue);
+      }
+
+      /* Selection color */
+      ::-moz-selection {
+        background: rgba(0, 212, 255, 0.3);
+        color: #ffffff;
+      }
+      ::selection {
+        background: rgba(0, 212, 255, 0.3);
+        color: #ffffff;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-DA0rww-8.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DCXQ6Qik.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+<!-- [FL:DONE] -->
