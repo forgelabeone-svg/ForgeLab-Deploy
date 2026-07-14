@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+  <title>Orbit Drift — Gravity Puzzle Arcade</title>
+  <meta name="description" content="Orbit Drift: gravitációs pályavezetéses űrhajó puzzle arcade játék." />
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div id="game-root">
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- HUD (in-game overlay) -->
+    <div id="hud" class="hidden">
+      <div class="hud-left">
+        <div class="hud-chip">
+          <span class="hud-label">PÁLYA</span>
+          <span id="hud-level" class="hud-value">1</span>
+        </div>
+        <div class="hud-chip">
+          <span class="hud-label">THRUST</span>
+          <span id="hud-thrust" class="hud-value">6</span>
+        </div>
+        <div class="hud-chip">
+          <span class="hud-label">IDŐ</span>
+          <span id="hud-timer" class="hud-value">00.0</span>
+        </div>
+      </div>
+      <div class="hud-right">
+        <button id="btn-pause" class="icon-btn" aria-label="Szünet">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="6" y="4" width="4" height="16"></rect>
+            <rect x="14" y="4" width="4" height="16"></rect>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile touch hint / virtual aim pad -->
+    <div id="touch-hint" class="hidden">Koppints és tartsd az irányhoz, engedd el a lövéshez</div>
+
+    <!-- Main Menu -->
+    <div id="screen-menu" class="screen">
+      <div class="screen-panel menu-panel">
+        <h1 class="game-title">ORBIT <span>DRIFT</span></h1>
+        <p class="game-subtitle">Gravitációs navigáció a mélyűrben</p>
+        <div class="menu-buttons">
+          <button id="btn-play" class="btn btn-primary">Play</button>
+          <button id="btn-level-select" class="btn btn-ghost">Pálya választó</button>
+          <button id="btn-how-to-play" class="btn btn-ghost">Hogyan játsszak?</button>
+        </div>
+        <p class="menu-footer">Irányítsd a hajót korlátozott számú thrust-impulzussal a portálig — kerüld a bolygókat és a pálya szélét.</p>
+      </div>
+    </div>
+
+    <!-- Level Select -->
+    <div id="screen-levels" class="screen hidden">
+      <div class="screen-panel levels-panel">
+        <h2 class="screen-heading">Pálya választó</h2>
+        <div id="level-grid" class="level-grid"></div>
+        <button id="btn-levels-back" class="btn btn-ghost">Vissza</button>
+      </div>
+    </div>
+
+    <!-- How to Play -->
+    <div id="screen-howto" class="screen hidden">
+      <div class="screen-panel howto-panel">
+        <h2 class="screen-heading">Hogyan játsszak?</h2>
+        <ul class="howto-list">
+          <li><strong>Cél:</strong> juttasd a hajót a start pontból a pulzáló cyan/zöld portálba.</li>
+          <li><strong>Gravitáció:</strong> a bolygók automatikusan húzzák/tolják a hajót — tömegük és távolságuk szerint.</li>
+          <li><strong>Thrust:</strong> minden pályán korlátozott számú rövid lökésed van. Egérrel célozz és kattints, vagy irányt adj WASD / nyilak segítségével, ill. mobilon érintéssel jelöld ki az irányt.</li>
+          <li><strong>Veszély:</strong> ha becsapódsz egy bolygóba, vagy kirepülsz a pálya határain túl, a pálya újraindul.</li>
+          <li><strong>Értékelés:</strong> a par idő / par thrust-szám alapján bronz, ezüst vagy arany minősítést kaphatsz.</li>
+          <li><strong>Szünet:</strong> a HUD jobb felső gombjával bármikor megállíthatod a játékot.</li>
+        </ul>
+        <button id="btn-howto-close" class="btn btn-primary">Értem, irány az űr!</button>
+      </div>
+    </div>
+
+    <!-- Pause Overlay -->
+    <div id="screen-pause" class="screen hidden">
+      <div class="screen-panel pause-panel">
+        <h2 class="screen-heading">Szünet</h2>
+        <div class="menu-buttons">
+          <button id="btn-resume" class="btn btn-primary">Folytatás</button>
+          <button id="btn-restart-pause" class="btn btn-ghost">Pálya újraindítása</button>
+          <button id="btn-quit-menu" class="btn btn-ghost">Vissza a menübe</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Level Complete -->
+    <div id="screen-complete" class="screen hidden">
+      <div class="screen-panel complete-panel">
+        <h2 class="screen-heading complete-heading">Pálya teljesítve!</h2>
+        <div id="rating-medal" class="rating-medal">🥇</div>
+        <div id="rating-label" class="rating-label">ARANY</div>
+        <div class="complete-stats">
+          <div class="stat-row"><span>Idő</span><span id="complete-time">00.0s</span></div>
+          <div class="stat-row"><span>Felhasznált thrust</span><span id="complete-thrust">0</span></div>
+          <div class="stat-row"><span>Par idő</span><span id="complete-par-time">00.0s</span></div>
+          <div class="stat-row"><span>Par thrust</span><span id="complete-par-thrust">0</span></div>
+        </div>
+        <div class="menu-buttons">
+          <button id="btn-next-level" class="btn btn-primary">Következő pálya</button>
+          <button id="btn-replay-level" class="btn btn-ghost">Újra ezt a pályát</button>
+          <button id="btn-complete-menu" class="btn btn-ghost">Főmenü</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Over -->
+    <div id="screen-gameover" class="screen hidden">
+      <div class="screen-panel gameover-panel">
+        <h2 class="screen-heading gameover-heading">Küldetés megszakadt</h2>
+        <p id="gameover-reason" class="gameover-reason">A hajó ütközött egy bolygóval.</p>
+        <div class="menu-buttons">
+          <button id="btn-restart-gameover" class="btn btn-primary">Újraindítás</button>
+          <button id="btn-gameover-menu" class="btn btn-ghost">Főmenü</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/script.js"></script>
+</body>
+</html>
