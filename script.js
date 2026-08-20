@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NextMe AI — آینده‌ات را قبل از زندگی کردن، ببین</title>
+  <meta name="description" content="NextMe AI؛ پلتفرم شبیه‌سازی زندگی با هوش مصنوعی. مسیرهای احتمالی آینده‌ات را کشف کن." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- ===================== LANDING VIEW ===================== -->
+    <section id="view-landing" class="view">
+      <header class="landing-nav">
+        <div class="brand"><span class="brand-mark"></span><span class="brand-name">NextMe <span class="accent-en">AI</span></span></div>
+        <nav class="landing-links">
+          <a href="#features">ویژگی‌ها</a>
+          <a href="#how-it-works">چطور کار می‌کند؟</a>
+          <a href="#pricing-teaser">قیمت‌گذاری</a>
+        </nav>
+        <button id="btn-nav-login" class="btn btn-ghost">ورود</button>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="pill">Life Simulation با AI</span>
+          <h1>آینده‌ات را قبل از زندگی کردن، ببین.</h1>
+          <p class="hero-sub">NextMe <span class="accent-en">AI</span> با شناخت شخصیت، اهداف و تصمیم‌های تو، مسیرهای احتمالی آینده‌ات را شبیه‌سازی می‌کند.</p>
+          <div class="hero-cta">
+            <button id="btn-cta-create" class="btn btn-primary btn-lg">ساخت Future Me</button>
+            <button id="btn-cta-how" class="btn btn-outline btn-lg">چطور کار می‌کند؟</button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="ai-core" id="hero-ai-core">
+            <div class="ai-core-ring ring-1"></div>
+            <div class="ai-core-ring ring-2"></div>
+            <div class="ai-core-glow"></div>
+            <span class="ai-core-label">AI</span>
+          </div>
+          <div class="orbit-tag tag-1">Future Me</div>
+          <div class="orbit-tag tag-2">Career</div>
+          <div class="orbit-tag tag-3">Finance</div>
+          <div class="orbit-tag tag-4">Habits</div>
+          <div class="orbit-tag tag-5">Decisions</div>
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <h2>یک جهان کامل از تصمیم‌ها</h2>
+        <div class="feature-grid">
+          <div class="feature-card"><h3>Daily Scenario</h3><p>هر روز یک تصمیم تازه منتظر توست؛ AI پیامدش را برایت شبیه‌سازی می‌کند.</p></div>
+          <div class="feature-card"><h3>What If</h3><p>هر سناریوی ذهنی‌ات را وارد کن و سه مسیر احتمالی آینده را ببین.</p></div>
+          <div class="feature-card"><h3>Future Me</h3><p>نسخه احتمالی خودت در سال‌های آینده، با Timeline تعاملی.</p></div>
+          <div class="feature-card"><h3>AI Insights</h3><p>الگوهای پنهان در تصمیم‌های قبلی‌ات را کشف کن.</p></div>
+        </div>
+      </section>
+
+      <section id="pricing-teaser" class="pricing-teaser">
+        <h2>مسیر خودت را انتخاب کن</h2>
+        <p class="muted">از Free شروع کن، وقتی آماده بودی برو سراغ PRO.</p>
+        <button id="btn-goto-pricing" class="btn btn-outline">مشاهده پلن‌ها</button>
+      </section>
+
+      <footer class="landing-footer">
+        <span>© ۱۴۰۳ NextMe <span class="accent-en">AI</span> — یک تجربه هوشمند از آینده تو</span>
+      </footer>
+    </section>
+
+    <!-- ===================== ONBOARDING VIEW ===================== -->
+    <section id="view-onboarding" class="view hidden">
+      <div class="onboarding-shell">
+        <div class="onboarding-head">
+          <span class="brand-name">NextMe <span class="accent-en">AI</span></span>
+          <div class="progress-indicator" id="onboarding-progress">
+            <div class="progress-bar" id="onboarding-progress-bar"></div>
+          </div>
+          <span class="step-count" id="onboarding-step-count">مرحله ۱ از ۸</span>
+        </div>
+
+        <div class="onboarding-body">
+          <div class="onboarding-steps" id="onboarding-steps">
+            <div class="step active" data-step="1">
+              <h2>بذار بشناسیمت</h2>
+              <input type="text" id="ob-name" class="input" placeholder="اسمت چیه؟" />
+            </div>
+            <div class="step" data-step="2">
+              <h2>چند سالته؟</h2>
+              <input type="number" id="ob-age" class="input" placeholder="سن" />
+            </div>
+            <div class="step" data-step="3">
+              <h2>شغلت چیه؟</h2>
+              <input type="text" id="ob-job" class="input" placeholder="مثلاً Software Engineer" />
+            </div>
+            <div class="step" data-step="4">
+              <h2>سطح درآمدت رو انتخاب کن</h2>
+              <select id="ob-income" class="input">
+                <option value="low">پایین</option>
+                <option value="medium">متوسط</option>
+                <option value="high">بالا</option>
+              </select>
+            </div>
+            <div class="step" data-step="5">
+              <h2>مهم‌ترین دغدغه فعلیت چیه؟</h2>
+              <textarea id="ob-concern" class="input" placeholder="مثلاً ثبات مالی، تغییر شغل..."></textarea>
+            </div>
+            <div class="step" data-step="6">
+              <h2>بزرگ‌ترین هدفت چیه؟</h2>
+              <textarea id="ob-goal" class="input" placeholder="آینده‌ای که دنبالشی رو توصیف کن"></textarea>
+            </div>
+            <div class="step" data-step="7">
+              <h2>چقدر ریسک‌پذیری؟</h2>
+              <input type="range" id="ob-risk" class="input" min="1" max="5" value="3" />
+            </div>
+            <div class="step" data-step="8">
+              <h2>Future Profile آماده شد 🎉</h2>
+              <p class="muted" id="ob-summary">در حال ساخت پروفایل هوشمند تو...</p>
+            </div>
+          </div>
+          <div class="ai-building-card">
+            <div class="ai-core small"><div class="ai-core-glow"></div><span class="ai-core-label">AI</span></div>
+            <p id="ob-live-profile">در حال شناخت شخصیت تو...</p>
+          </div>
+        </div>
+
+        <div class="onboarding-nav">
+          <button id="btn-onboarding-back" class="btn btn-ghost">قبلی</button>
+          <button id="btn-onboarding-next" class="btn btn-primary">بعدی</button>
+          <button id="btn-onboarding-finish" class="btn btn-primary hidden">ورود به Dashboard</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== APP SHELL (Authenticated) ===================== -->
+    <div id="app-shell" class="hidden">
+      <aside id="sidebar" class="sidebar">
+        <div class="brand"><span class="brand-mark"></span><span class="brand-name">NextMe <span class="accent-en">AI</span></span></div>
+        <nav class="sidebar-nav">
+          <button class="nav-item active" data-view="dashboard">Dashboard</button>
+          <button class="nav-item" data-view="scenario">Scenario</button>
+          <button class="nav-item" data-view="whatif">What If</button>
+          <button class="nav-item" data-view="futureme">Future Me</button>
+          <button class="nav-item" data-view="insights">Insight</button>
+          <button class="nav-item" data-view="pricing">PRO</button>
+          <button class="nav-item" data-view="profile">پروفایل</button>
+        </nav>
+      </aside>
+
+      <header id="topbar">
+        <button id="btn-sidebar-toggle" class="btn btn-ghost icon-btn">☰</button>
+        <span id="topbar-title">Dashboard</span>
+        <div class="topbar-stats">
+          <span id="topbar-xp" class="badge">XP ۰</span>
+          <span id="topbar-streak" class="badge">Streak ۰</span>
+        </div>
+      </header>
+
+      <main id="main-content">
+
+        <section id="view-dashboard" class="view">
+          <h1 id="dash-greeting">سلام 👋</h1>
+          <p class="muted" id="dash-daily-summary">در حال بارگذاری خلاصه هوشمند امروز...</p>
+          <div class="stat-grid">
+            <div class="stat-card"><span class="stat-label">Future Score</span><span class="stat-value" id="stat-future-score">—</span></div>
+            <div class="stat-card"><span class="stat-label">Level</span><span class="stat-value" id="stat-level">—</span></div>
+            <div class="stat-card"><span class="stat-label">XP</span><span class="stat-value" id="stat-xp">—</span></div>
+            <div class="stat-card"><span class="stat-label">Streak</span><span class="stat-value" id="stat-streak">—</span></div>
+          </div>
+          <div class="dash-grid">
+            <div class="card" id="dash-daily-scenario-card">
+              <h2>Daily Scenario</h2>
+              <div class="empty-state">در حال آماده‌سازی سناریوی امروز...</div>
+            </div>
+            <div class="card" id="dash-recent-decisions-card">
+              <h2>Recent Decisions</h2>
+              <div class="empty-state">هنوز تصمیمی ثبت نشده.</div>
+            </div>
+            <div class="card" id="dash-insights-card">
+              <h2>AI Insights</h2>
+              <div class="empty-state">با چند تصمیم بیشتر، اینجا الگوهایت رو نشون می‌دیم.</div>
+            </div>
+            <div class="card" id="dash-timeline-card">
+              <h2>Future Timeline</h2>
+              <div class="empty-state">Timeline آینده‌ات هنوز خالیه.</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="view-scenario" class="view hidden">
+          <h1>یک تصمیم تازه منتظر توست</h1>
+          <div class="card" id="scenario-content">
+            <div class="empty-state">در حال دریافت سناریوی امروز...</div>
+          </div>
+          <div class="scenario-options" id="scenario-options">
+            <button class="option-btn" data-choice="A">A · قبول می‌کنم</button>
+            <button class="option-btn" data-choice="B">B · رد می‌کنم</button>
+            <button class="option-btn" data-choice="C">C · مذاکره می‌کنم</button>
+          </div>
+          <div class="card hidden" id="scenario-result">
+            <h2>پیامد احتمالی</h2>
+            <div class="param-bars" id="scenario-param-bars"></div>
+          </div>
+        </section>
+
+        <section id="view-whatif" class="view hidden">
+          <h1>What If؟</h1>
+          <p class="muted">هر سناریویی که ذهنت رو مشغول کرده، اینجا بپرس.</p>
+          <div class="whatif-input-row">
+            <input type="text" id="whatif-input" class="input" placeholder="مثلاً: اگر مهاجرت کنم؟" />
+            <button id="btn-whatif-submit" class="btn btn-primary">بررسی کن</button>
+          </div>
+          <div class="whatif-results" id="whatif-results">
+            <div class="empty-state">هنوز سناریویی بررسی نشده.</div>
+          </div>
+        </section>
+
+        <section id="view-futureme" class="view hidden">
+          <h1>Future Me</h1>
+          <div class="year-selector" id="futureme-year-selector">
+            <button class="year-btn" data-year="1">۱ سال بعد</button>
+            <button class="year-btn active" data-year="3">۳ سال بعد</button>
+            <button class="year-btn" data-year="5">۵ سال بعد</button>
+          </div>
+          <div class="card" id="futureme-content">
+            <div class="empty-state">در حال ساخت نسخه آینده تو...</div>
+          </div>
+          <div class="timeline" id="futureme-timeline"></div>
+        </section>
+
+        <section id="view-insights" class="view hidden">
+          <h1>AI Insight</h1>
+          <div class="insight-list" id="insight-list">
+            <div class="empty-state">با ثبت چند تصمیم بیشتر، Insight هات اینجا نمایان می‌شن.</div>
+          </div>
+          <div class="achievements" id="achievement-list"></div>
+        </section>
+
+        <section id="view-pricing" class="view hidden">
+          <h1>مسیر خودت رو انتخاب کن</h1>
+          <div class="pricing-grid" id="pricing-grid">
+            <div class="price-card">
+              <h2>Free</h2>
+              <p class="price" data-price="0">۰ تومان</p>
+              <ul><li>Daily Scenario محدود</li><li>Basic Insight</li><li>Basic Future Profile</li></ul>
+              <button class="btn btn-outline" disabled>پلن فعلی</button>
+            </div>
+            <div class="price-card featured">
+              <h2>PRO</h2>
+              <p class="price" data-price="149000">۱۴۹,۰۰۰ تومان / ماه</p>
+              <ul><li>What If نامحدود</li><li>Advanced AI Insight</li><li>Future Timeline کامل</li></ul>
+              <button id="btn-upgrade-pro" class="btn btn-primary">Unlock PRO</button>
+            </div>
+            <div class="price-card">
+              <h2>Premium</h2>
+              <p class="price" data-price="349000">۳۴۹,۰۰۰ تومان / ماه</p>
+              <ul><li>Priority AI</li><li>Future Me Advanced</li><li>Premium Challenge</li></ul>
+              <button id="btn-upgrade-premium" class="btn btn-outline">ارتقا بده</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="view-profile" class="view hidden">
+          <h1>پروفایل من</h1>
+          <div class="card" id="profile-content">
+            <div class="empty-state">در حال بارگذاری پروفایل...</div>
+          </div>
+          <div class="card">
+            <h2>مدیریت اشتراک</h2>
+            <button id="btn-manage-subscription" class="btn btn-outline">Manage Subscription</button>
+            <button id="btn-cancel-subscription" class="btn btn-ghost">Cancel Subscription</button>
+          </div>
+        </section>
+
+      </main>
+
+      <nav id="bottom-nav" class="bottom-nav">
+        <button class="bottom-nav-item active" data-view="dashboard">خانه</button>
+        <button class="bottom-nav-item" data-view="scenario">Scenario</button>
+        <button class="bottom-nav-item" data-view="futureme">Future Me</button>
+        <button class="bottom-nav-item" data-view="insights">Insight</button>
+        <button class="bottom-nav-item" data-view="profile">پروفایل</button>
+      </nav>
+    </div>
+
+    <!-- ===================== GLOBAL OVERLAYS / STATES ===================== -->
+    <div id="ai-thinking-overlay" class="overlay hidden">
+      <div class="ai-core small"><div class="ai-core-glow"></div><span class="ai-core-label">AI</span></div>
+      <p>در حال فکر کردن...</p>
+    </div>
+
+    <div id="offline-banner" class="banner hidden">اتصال اینترنت برقرار نیست.</div>
+    <div id="ratelimit-banner" class="banner hidden">درخواست‌های امروزت به سقف رسیده. فردا دوباره تلاش کن.</div>
+    <div id="subscription-expired-banner" class="banner hidden">اشتراک PRO تو منقضی شده. برای ادامه دسترسی پیشرفته، ارتقا بده.</div>
+
+    <div id="toast-container" class="toast-container"></div>
+  </div>
+
+  <script type="module" src="/script.js"></script>
+</body>
+</html>

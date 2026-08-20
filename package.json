@@ -1,0 +1,16 @@
+{
+  "name": "nextme-ai",
+  "private": true,
+  "version": "1.0.0",
+  "description": "NextMe AI — پلتفرم تعاملی AI Life Simulator برای شبیه‌سازی آینده، تصمیم‌ها، مسیر شغلی و مالی",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.10"
+  },
+  "dependencies": {}
+}
