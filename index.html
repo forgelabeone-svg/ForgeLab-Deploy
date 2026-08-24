@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#16a34a" />
+    <meta
+      name="description"
+      content="CalorieTrack - a simple personal calorie tracker to log daily food intake, set goals, and view your progress over time."
+    />
+    <title>CalorieTrack - Daily Calorie Tracker</title>
+
+    <!-- Inter font for clean modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Base reset so the app paints on green-tinted white while JS loads */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f0fdf4;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      #root {
+        min-height: 100vh;
+      }
+      /* Simple loading indicator before React mounts */
+      #root:empty::after {
+        content: 'Loading CalorieTrack...';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        color: #16a34a;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-D0cyhTEk.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CpjZ6DGJ.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+<!-- [FL:DONE] -->
